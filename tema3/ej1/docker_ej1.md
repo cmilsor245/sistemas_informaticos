@@ -210,9 +210,9 @@ docker rmi $(docker images -q nginx)
 <p><b>Create a container based on the image above with the parameter –d –p 80:3000. Visit the localhost site from any browser.</b></p>
 
 ```bash
-mkdir /home/christian/node
+mkdir /home/usuario/node
 ```
 
 ```bash
-cp /mnt/c/Users/chris/Downloads/node-master/. nodejs:/home/christian/node
+cp /mnt/c/Users/chris/Downloads/node-master/. nodejs:/home/usuario/node
 ```
