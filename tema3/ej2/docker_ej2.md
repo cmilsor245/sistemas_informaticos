@@ -69,6 +69,6 @@ docker cp . webapache:/usr/local/apache2/htdocs
 
 <img src="img/ej3.png">
 
-<p><b>4. </b></p>
+<p><b>4. To see if it works, stop the container and then start it again. Visit in a browser the address "localhost:8080".</b></p>
 
 <img src="img/ej4.png">
