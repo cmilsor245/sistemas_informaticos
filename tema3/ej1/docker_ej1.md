@@ -208,3 +208,11 @@ docker rmi $(docker images -q nginx)
 <p><b>Create an image called web_node based on the contents of the Dockerfile.</b></p>
 
 <p><b>Create a container based on the image above with the parameter –d –p 80:3000. Visit the localhost site from any browser.</b></p>
+
+```bash
+mkdir /home/christian/node
+```
+
+```bash
+cp /mnt/c/Users/chris/Downloads/node-master/. nodejs:/home/christian/node
+```
