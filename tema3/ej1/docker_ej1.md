@@ -241,10 +241,28 @@ docker cp node-master/ nodejs:/home/user/node
 ls -la
 ```
 
+<p>An now again from Ubuntu:</p>
+
 <img src="img/ej19-3.png">
 
 ```bash
-
+docker build -t web_node:v01 .
 ```
 
 <img src="img/ej19-4.png">
+
+```bash
+docker images
+```
+
+<img src="img/ej19-5.png">
+
+```bash
+docker run -d -p 80:3000 web_node:v01
+```
+
+<img src="img/ej19-6.png">
+
+<p>An from a web browser:</p>
+
+<img src="img/ej19-7.png">
