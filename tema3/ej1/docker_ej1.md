@@ -209,6 +209,42 @@ docker rmi $(docker images -q nginx)
 
 <p><b>Create a container based on the image above with the parameter –d –p 80:3000. Visit the localhost site from any browser.</b></p>
 
+<p>"Dockerfile" file content:</p>
+
+```bash
+FROM node:19-alpine
+
+EXPOSE 3000
+
+COPY app.js /app.js
+
+CMD ["node", "/app.js"]
+```
+
+<p>Copying the content on the "nodejs" server previously created:</p>
+
+```bash
+tree
+```
+
+<img src="img/ej19.png">
+
+```bash
+docker cp node-master/ nodejs:/home/user/node
+```
+
+<img src="img/ej19-2.png">
+
+<p>Now from the server terminal:</p>
+
+```bash
+ls -la
+```
+
+<img src="img/ej19-3.png">
+
 ```bash
 
 ```
+
+<img src="img/ej19-4.png">
