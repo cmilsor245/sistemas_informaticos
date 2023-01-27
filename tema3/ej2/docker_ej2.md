@@ -119,4 +119,4 @@ docker run -d --name nuevaweb -p 8081 nuevaweb
 
 <p><b>8. Check that the previous step works. To do this, it modifies the content of the web page and test that when updating the changes are published by the server.</b></p>
 
-<p></p>
+<p>To check if the previous step works, you can modify the content of a web page in the host's host_directory and then test that the changes are visible on the web server running in the container. You can do this by accessing the web page through a web browser or by using a tool like curl to make an HTTP request to the container's IP address or hostname.</p>
