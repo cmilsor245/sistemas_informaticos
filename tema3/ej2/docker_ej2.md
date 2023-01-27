@@ -72,3 +72,52 @@ docker cp . webapache:/usr/local/apache2/htdocs
 <p><b>4. To see if it works, stop the container and then start it again. Visit in a browser the address "localhost:8080".</b></p>
 
 <img src="img/ej4.png">
+
+<p><b>5. Using the image pulled in exercise 1, create a new image using "Dockerfile" to create a container called "nuevaweb", which will be used as a web page, using port 8081.</b></p>
+
+<p>Content in the "Dockerfile" file:</p>
+
+```bash
+from httpd:2.4.54-alpine
+copy . /usr/local/apache2/htdocs
+expose 8081
+```
+
+<img src="img/ej5.png">
+
+<p>Building the image, this time I didn't specify the version:</p>
+
+```bash
+docker build -t nuevaweb .
+```
+
+<img src="img/ej5-2.png">
+
+```bash
+docker images
+```
+
+<img src="img/ej5-3.png">
+
+<p>An now creating the container from this image:</p>
+
+```bash
+docker run -d --name nuevaweb -p 8081 nuevaweb
+```
+
+<img src="img/ej5-4.png">
+
+<p>And now it can be visited from a web browser:</p>
+
+<img src="img/ej5-5.png">
+
+<p><b>6. Modify the web page content. What do you need to do?</b></p>
+
+<p></p>
+
+<p><b>7. To avoid having to rebuild the container on each page source code change web, use a volume that automatically synchronizes the web directory of our host with container web directory. Use the following statement: "docker run -d -p 80:80 -v host_directory:webapache_container_directory"</b></p>
+
+
+
+<p><b>8. Check that the previous step works. To do this, it modifies the content of the web page and test that when updating the changes are published by the server.</b></p>
+
