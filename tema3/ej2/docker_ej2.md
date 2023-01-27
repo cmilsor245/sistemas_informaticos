@@ -10,7 +10,7 @@
     border: 2px solid black;
   }
 
-  <p{
+  p{
     text-align: justify;
   }>
 </style>
@@ -107,17 +107,15 @@ docker run -d --name nuevaweb -p 8081 nuevaweb
 
 <img src="img/ej5-4.png">
 
-<p>And now it can be visited from a web browser:</p>
-
-<img src="img/ej5-5.png">
+<p>And now it can be visited from a web browser.</p>
 
 <p><b>6. Modify the web page content. What do you need to do?</b></p>
 
-<p></p>
+<p>To modify the web page, you must access the container where said page is hosted and modify the code from there.</p>
 
-<p><b>7. To avoid having to rebuild the container on each page source code change web, use a volume that automatically synchronizes the web directory of our host with container web directory. Use the following statement: "docker run -d -p 80:80 -v host_directory:webapache_container_directory"</b></p>
+<p><b>7. To avoid having to rebuild the container on each page source code change web, use a volume that automatically synchronizes the web directory of our host with container web directory. Use the following statement: "docker run -d -p 80:80 -v host_directory:webapache_container_directory".</b></p>
 
-
+<p>The command "docker run -d -p 80:80 -v host_directory:webapache_container_directory" will run a container in detached mode (-d) and map port 80 of the host to port 80 of the container (-p 80:80). It also creates a volume (-v host_directory:webapache_container_directory) that synchronizes the host directory host_directory with the container's webapache_container_directory directory. This means that any changes made to the files in host_directory will be reflected in the container's webapache_container_directory directory, and vice versa, eliminating the need to rebuild the container each time there is a change to the web source code.</p>
 
 <p><b>8. Check that the previous step works. To do this, it modifies the content of the web page and test that when updating the changes are published by the server.</b></p>
 
