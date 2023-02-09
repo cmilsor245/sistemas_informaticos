@@ -126,3 +126,5 @@ sudo docker run -d -p 8080:8080 -v ~/auxiliar/fin_1er_trimestre:/usr/share/nginx
 <img src="img/3.4.png">
 
 <p>And yet again, I`m able to visit the "3.235.164.103:8080" URl.</p>
+
+<p><b>4. Use "UbuntuDockerAWS" to create a new AMI (Amazon Machine Image). Thus, we can create easily new EC2 instances based in "UbuntuDockerAWS" with all work already done to be reused.</b></p>
