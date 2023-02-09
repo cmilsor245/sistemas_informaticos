@@ -59,4 +59,26 @@ sudo apt install docker.io
 
 <p><b>d. Use WinSCP to transfer the content of a static web page to home directory.</b></p>
 
-<p></p>
+<p>I create a new SCP connection with the host in WinSCP.</p>
+
+<img src="img/2.5.png">
+
+<p>And now I can transfer my static project to the server home directory.</p>
+
+<img src="img/2.6.png">
+
+<p><b>e. Run a "nginx:1.22.1" docker to publish this static web page (port 80).</b></p>
+
+```bash
+sudo docker run -d -p 80:80 -v ~/fin_1er_trimestre:/usr/share/nginx/html nginx:1.22.1
+```
+
+<img src="img/2.7.png">
+
+<p>It is now possible to visit "3.235.164.103:80" and visit the page, located on the docker nginx server.</p>
+
+<img src="img/2.8.png">
+
+<p><b>3. Now consider you are not using Windows but an Ubuntu console:</b></p>
+
+<p><b>a. </b></p>
