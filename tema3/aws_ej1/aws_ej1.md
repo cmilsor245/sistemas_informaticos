@@ -81,4 +81,20 @@ sudo docker run -d -p 80:80 -v ~/fin_1er_trimestre:/usr/share/nginx/html nginx:1
 
 <p><b>3. Now consider you are not using Windows but an Ubuntu console:</b></p>
 
-<p><b>a. </b></p>
+<p><b>a. Access to previous "UbuntuDockerAWS" EC2 instance.</b></p>
+
+<p>To be able to do this, I first need to download the "PEM" vockey file for the instance.</p>
+
+```bash
+chmod 400 labsuser.pem
+```
+
+<img src="img/3.1.png">
+
+<p>Once I have this file, I need to change it's permissions:</p>
+
+```bash
+ssh -i "labuser.pem" ubuntu@ec2-3-235-164-103.compute-1.amazonaws.com
+```
+
+<img src="img/3.2.png">
