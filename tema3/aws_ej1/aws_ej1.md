@@ -114,3 +114,15 @@ scp -i "vockey.pem" /mnt/c/Users/chris/Documents/DAW/lenguajes_de_marcas/fin_1er
 ```
 
 <img src="img/3.3.png">
+
+<p><b>c. Run a "nginx:perl" docker to publish this static web page in port 8080.</b></p>
+
+<p>Now from the "UbuntuDockerAWS" instance:</p>
+
+```bash
+sudo docker run -d -p 8080:8080 -v ~/auxiliar/fin_1er_trimestre:/usr/share/nginx/html nginx:perl
+```
+
+<img src="img/3.4.png">
+
+<p>And yet again, I`m able to visit the "3.235.164.103:8080" URl.</p>
