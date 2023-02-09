@@ -98,3 +98,19 @@ ssh -i "labuser.pem" ubuntu@ec2-3-235-164-103.compute-1.amazonaws.com
 ```
 
 <img src="img/3.2.png">
+
+<p><b>b. Copy using "scp" command a directory with another static web page to the "UbuntuDockerAWS" EC2 instance.</b></p>
+
+<p>First of all, since I am going tu use the same web page, I need to create an additional directory in the user home of "UbuntuDockerAWS" to locate the page in there.</p>
+
+```bash
+mkdir auxiliar
+```
+
+<p>Now that I have a place to copy the page in, I can use the SCP command:</p>
+
+```bash
+
+```
+
+<img src="img/3.3.png">
