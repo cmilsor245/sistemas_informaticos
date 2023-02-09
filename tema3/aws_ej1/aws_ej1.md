@@ -110,7 +110,7 @@ mkdir auxiliar
 <p>Now that I have a place to copy the page in, I can use the SCP command:</p>
 
 ```bash
-
+scp -i "vockey.pem" /mnt/c/Users/chris/Documents/DAW/lenguajes_de_marcas/fin_1er_trimestre/* ubuntu@ec2-3-235-164-103.compute-1.amazonaws.com:/home/ubuntu/auxiliar
 ```
 
 <img src="img/3.3.png">
