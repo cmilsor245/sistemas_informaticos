@@ -61,6 +61,112 @@ aws s3 mb s3://web-estaticaawss3ej1cms
 
 <p><b>This bucket must host an "index.html" file, which contains all the photos an videos located on the previous buckets.</b></p>
 
+<p>First, I create a new index file. Its code:</p>
+
+```html
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>GATETES</title>
+
+    <style>
+      html{
+        font-family: arial;
+        background-color: gray;
+      }
+
+      h1{
+        text-align: center;
+        font-weight: bold;
+        font-size: 40px;
+        text-decoration: underline;
+      }
+
+      h4{
+        text-align: center;
+        font-size: 19px;
+      }
+
+      img{
+        position: relative;
+        height: 18%;
+        width: 10%;
+        left: 45%;
+        border: 2px solid black;
+        transition: 1s ease all;
+      }
+
+      img:hover{
+        transition: 1s ease all;
+        border: 2px solid white;
+        scale: 1.1;
+      }
+
+      .video{
+        position: relative;
+        left: 48%;
+        text-align: center;
+        font-size: 30px;
+        color: orange;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 1s ease all;
+      }
+
+      .video:hover{
+        transition: 1s ease all;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>GATETES</h1>
+
+    <hr>
+
+    <h4>Admiral Purrscuit</h4>
+
+    <a target="_blank" href="https://fotosawss3ej1cms.s3.amazonaws.com/gatito.jpg"><img src="https://fotosawss3ej1cms.s3.amazonaws.com/gatito.jpg"></a>
+
+    <hr>
+
+    <h4>Sir Reginald Fluffington III</h4>
+
+    <img src="https://fotosawss3ej1cms.s3.amazonaws.com/gatito1.jpg">
+
+    <hr>
+
+    <h4>Count Fuzzball von Clawsworth</h4>
+
+    <img src="https://fotosawss3ej1cms.s3.amazonaws.com/gatito3.jpg">
+
+    <hr>
+
+    <h4>Captain Meowvel</h4>
+
+    <img src="https://fotosawss3ej1cms.s3.amazonaws.com/gatito4.jpg">
+
+    <hr>
+
+    <h4>Lord Meowmers</h4>
+
+    <img src="https://fotosawss3ej1cms.s3.amazonaws.com/gatito5.jpg">
+
+    <hr>
+
+    <h4>Bartolo</h4>
+
+    <img src="https://fotosawss3ej1cms.s3.amazonaws.com/gatitolactante.png">
+
+    <hr><hr><hr>
+
+    <a class="video" target="_blank" href="https://videosawss3ej1cms.s3.amazonaws.com/video.mp4">VIDEO</a>
+  </body>
+</html>
+```
+
 <p><b>4. Configure the last bucket for it to be able to host static web pages.</b></p>
 
 <p>First thing I need to do is to make my bucket public.</p>
