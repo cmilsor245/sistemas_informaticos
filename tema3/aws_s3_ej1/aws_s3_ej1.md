@@ -169,25 +169,17 @@ aws s3 mb s3://web-estaticaawss3ej1cms
 
 <p><b>4. Configure the last bucket for it to be able to host static web pages.</b></p>
 
-<p>First thing I need to do is to make my bucket public.</p>
+<p>Now I can provide the index file to the bucket:</p>
 
 ```bash
-aws s3api put-public-access-block --bucket web-estaticaawss3ej1cms --public-access-block-configuration "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false"
+aws s3 cp web/ s3://web-estaticaawss3ej1cms --recursive
 ```
 
 <img src="img/4.1.png">
 
-<p>And now I can provide the index file to the bucket:</p>
-
-```bash
-aws s3 website s3://your-bucket-name/ --index-document index.html
-```
-
-<img src="img/4.2.png">
-
 <p>Finally, my bucket is available on the web.</p>
 
-<img src="img/4.3.png">
+<img src="img/4.2.png">
 
 <p><b>5. Create a screenshot that demonstrates that you can check all your instances.</b></p>
 
