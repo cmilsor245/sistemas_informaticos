@@ -19,16 +19,16 @@
 
 <hr>
 
-<h3>Preguntas qye hemos de saber responder:</h3>
+<h2><b>Preguntas qye hemos de saber responder:</b></h2>
 
-<p>Dada la IPv4 172.31.15.6/20...</p>
+<p><b>Dada la IPv4 172.31.15.6/20...</b></p>
 
-<li>¿A qué red pertenece? ¿Cuál es su máscara?</li>
+<li><b>¿A qué red pertenece? ¿Cuál es su máscara?</b></li>
 
-<li>¿Cuál es el nº de hosts que puede soportar?</li>
+<li><b>¿Cuál es el nº de hosts que puede soportar?</b></li>
 
-<li>¿Cuál es la primera IP asignable?</li>
+<li><b>¿Cuál es la primera IP asignable?</b></li>
 
-<li>¿Cuál es la dirección de broadcast?</li>
+<li><b>¿Cuál es la dirección de broadcast?</b></li>
 
-<li>¿Cuál sería la última IP asignable?</li>
+<li><b>¿Cuál sería la última IP asignable?</b></li>
