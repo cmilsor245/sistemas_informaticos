@@ -35,6 +35,14 @@
 
 <hr>
 
+<p><b>1. Explica de qué manera se accede al panel de control de AWS a través del "Learner Lab" que tienes asignado.</b></p>
+
+<p>Para acceder al panel de control de AWS a través del "Learner Lab" que nos ha sido asignado, debemos iniciar sesión en la plataforma "AWS Educate". Una vez dentro, seleccionamos el "Learner Lab" correspondiente y hacemos clic en "Abrir consola AWS". Esto nos llevará al panel de control de AWS, donde podremos administrar los servicios y recursos disponibles en nuestro "Learner Lab". Es importante tener en cuenta que el acceso a ciertos servicios y funciones puede estar restringido dependiendo de la configuración del "Learner Lab".</p>
+
+<p><b>2. Rellena la siguiente tabla con los conceptos aprendidos en clase o utilizando la documentación proporcionada:</b></p>
+
+<img src="img/2.png">
+
 <p><b>3. Vamos a crear un VPC con las siguientes condiciones:</b></p>
 
 <p><b>Se trata de montar una infraestructura para una empresa que va a tener dos subredes: una pública y otra privada. Cada una de las subredes estará dispersa en dos zonas de disponibilidad de la región para más disponibilidad y seguridad.</b></p>
