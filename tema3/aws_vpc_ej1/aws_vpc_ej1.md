@@ -13,6 +13,10 @@
   img{
     border: 2px solid black;
   }
+
+  #ex{
+    border: none;
+  }
 </style>
 
 <h1>AWS VPC EX1</h1>
@@ -41,7 +45,7 @@
 
 <p><b>2. Rellena la siguiente tabla con los conceptos aprendidos en clase o utilizando la documentación proporcionada:</b></p>
 
-<img src="img/2.png">
+<img id="ex" src="img/2.png">
 
 <p><b>3. Vamos a crear un VPC con las siguientes condiciones:</b></p>
 
