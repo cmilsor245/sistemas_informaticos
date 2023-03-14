@@ -64,3 +64,7 @@
 <p>Lo primero es iniciar el Learner Lab del entorno de AWS.</p>
 
 <img src="img/1.png">
+
+<p>Una vez dentro del panel de control, buscamos "vpc" en la barra de búsqueda y clicamos en la opción que nos llevará al menú principal para poder trabajar con las VPC.</p>
+
+<img src="img/2.png">
