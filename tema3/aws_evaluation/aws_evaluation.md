@@ -204,3 +204,13 @@
 <p>Dentro de ella podemos volver a ver el resumen de la VPC configurada al completo, donde ahora aparece la tabla de enrutamiento principal, entre otras cosas:</p>
 
 <img src="img/27.png">
+
+<hr>
+
+<p><b>2.b. Una vez creada la VPC, vamos a crear una instancia EC2 en la red pública.</b></p>
+
+<p><b>Detalles de la instancia a crear:</b></p>
+
+<li><b>Nombre: Ubuntu_WebServer</b></li>
+
+<li><b>Capa gratuita</b></li>
