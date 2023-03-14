@@ -61,3 +61,6 @@
 
 <img src="img/salida_publica.png">
 
+<p>Lo primero es iniciar el Learner Lab del entorno de AWS.</p>
+
+<img src="img/1.png">
