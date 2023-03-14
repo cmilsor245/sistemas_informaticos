@@ -83,3 +83,24 @@
 
 <img src="img/5.png">
 
+<p>Hacemos clic en el botón "Create VPC" y podemos ver cómo la VPC se ha creado correctamente con los ajustes definidos.</p>
+
+<img src="img/6.png">
+
+<p>El siguiente paso es dirigirse al panel lateral de la izquierda para entrar en el apartado "Subnets".</p>
+
+<img src="img/7.png">
+
+<p>Una vez dentro, localizamos la opción "Create subnet", en la esquina superior derecha del menú. Hacemos clic en ella.</p>
+
+<p>Se nos presenta un menú de creación similar al anterior para crear la subred nueva.</p>
+
+<p>En el desplegable que aparece en el primer cuadro se debe seleccionar la VPC que creamos anteriormente:</p>
+
+<img src="img/8.png">
+
+<p>De esta forma hemos vinculado la nueva subred que vamos a crear a la VPC con la que trabajaremos en este ejercicio.</p>
+
+<p>En el siguiente cuadro aparecen nuevos ajustes. Debemos establecer un nombre para la nueva subred (tendremos que crear dos subredes, por lo que esta primera se llamará "vpc_publica_test").</p>
+
+<p>Es importante que la zona de disponibilidad sea "US East (N. Virginia) / ...", ya que es donde se localiza la versión de AWS que tenemos disponible con nuestro correo corporativo.</p>
