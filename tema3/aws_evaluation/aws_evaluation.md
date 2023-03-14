@@ -171,3 +171,36 @@
 
 <img src="img/20.png">
 
+<p>Una vez hecho, si volvemos a la pestaña "Subnet associations", podemos ver que en el cuadro de arriba ya aparece la subred que acabamos de asociar a esta tabla de enrutamiento.</p>
+
+<img src="img/21.png">
+
+<p>Ahora cambiamos de pestaña a la principal, llamada "Routes".</p>
+
+<p>En ella podemos ver otro cuadro con un botón en su esquina superior derecha que dice "Edit routes". Clicamos en él.</p>
+
+<img src="img/22.png">
+
+<p>Lo que tenemos que hacer en este menú de ajustes es añadir una ruta nueva conocida como es la 0.0.0.0/0.</p>
+
+<p>Esta ruta se encarga de que, en caso de que la dirección con la que se quiere establecer conexión no se encuentre entre el rango de IPs locales establecidas en la ruta justo encima (es decir, la comunicación no se va a establecer con un equipo local, sino con uno fuera de la red interna, un equipo de Internet), se establecerá comunicación con una IP cualquiera, que no pertenece a la red local.</p>
+
+<p>Por lo tanto, en el primer recuadro, se establece el rango 0.0.0.0/0 y, en el segundo recuadro (el cual es un desplegable), debemos seleccionar la opción "Internet Gateway", la cual mostrará los gateways disponibles, entre los que estará el gateway que creamos anteriormente.</p>
+
+<img src="img/23.png">
+
+<img src="img/24.png">
+
+<p>Guardamos los cambios.</p>
+
+<p>Para terminar con la creación de la VPC, volvemos al menú lateral izquierdo, a la opción llamada "Your VPCs".</p>
+
+<img src="img/25.png">
+
+<p>Nos aparece una lista de las VPCs que tenemos disponibles. Hacemos clic en la que acabamos de terminar de crear.</p>
+
+<img src="img/26.png">
+
+<p>Dentro de ella podemos volver a ver el resumen de la VPC configurada al completo, donde ahora aparece la tabla de enrutamiento principal, entre otras cosas:</p>
+
+<img src="img/27.png">
