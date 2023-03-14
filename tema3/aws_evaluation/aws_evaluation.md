@@ -68,3 +68,18 @@
 <p>Una vez dentro del panel de control, buscamos "vpc" en la barra de búsqueda y clicamos en la opción que nos llevará al menú principal para poder trabajar con las VPC.</p>
 
 <img src="img/2.png">
+
+<p>Entre las opciones que ofrece este panel de control, debemos elegir primero la de crear una nueva VPC.</p>
+
+<img src="img/3.png">
+
+<p>Nos encontramos con una serie de ajustes que podemos cambiar o dejar de forma predeterminada. Para empezar, marcamos la opción "VPC only" de la izquierda, ya que por ahora solo queremos crear una VPC básica.</p>
+
+<p>Se le asigna un nombre ("vpc_< tusiniciales >"). Se establece el CIDR que nos pide el ejercicio y, por último, añadimos una etiqueta "AWSEvaluation" con valor "1daw" (esto es solo un ejemplo, la etiqueta puede ser cualquiera, simplemente debe ser identificable).</p>
+
+<img src="img/4.png">
+
+<p>Esto último lo haremos siempre que se presente la opción de añadir una nueva etiqueta para poder encontrar los elementos de forma más sencilla en caso de ser necesario.</p>
+
+<img src="img/5.png">
+
