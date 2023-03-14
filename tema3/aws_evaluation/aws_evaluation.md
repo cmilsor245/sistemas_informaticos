@@ -121,4 +121,53 @@
 
 <img src="img/11.png">
 
-<p>Una vez creadas las dos subredes, </p>
+<p>Una vez creadas las dos subredes, volvemos al menú lateral izquierdo para entrar en el menú "Internet gateways". La subred pública debe poder salir a Internet si es necesario, para ello hace falta una puerta de enlace.</p>
+
+<img src="img/12.png">
+
+<p>Seguimos el mismo proceso inicial que en los demás paneles de control y hacemos clic en el botón "Create internet gateway" en la esquina superior derecha.</p>
+
+<p>Establecemos un nombre para la nueva puerta de enlace y la asignamos la misma etiqueta de siempre. El nombre puede seguir el patrón "gw_vpc_< tusiniciales >", por ejemplo, aunque se le puede poner cualquier nombre (preferiblemente reconocible).</p>
+
+<img src="img/13.png">
+
+<p>Clicamos en el botón de creación para terminar de crear el gateway.</p>
+
+<p>Al crearse, salimos automáticamente al panel de control, y más concretamente al apartado del propio gateway que se acaba de crear.</p>
+
+<p>Ahora es necesario vincular esta puerta de enlace recién creada con la VPC que creamos anteriormente. Para ello debemos hacer clic en el botón "Attach to a VPC" que aparece en la esquina superior derecha justo después de terminar de crear el gateway.</p>
+
+<img src="img/14.png">
+
+<p>Una vez dentro, simplemente seleccionamos nuestro VPC en el desplegable que aparece en el cuadro de ajustes.</p>
+
+<img src="img/15.png">
+
+<p>Clicamos en el botón de confirmación y se vincula la puerta de enlace con la VPC.</p>
+
+<p>Una vez más, vamos al menú lateral izquierdo, esta vez a la opción "Route tables".</p>
+
+<img src="img/16.png">
+
+<p>Como venimos haciendo en cada menú, hacemos clic en el botón "Create route table" en la esquina superior derecha.</p>
+
+<p>Para el nombre de la nueva tabla de enrutamiento podemos seguir el mismo patrón que utilizamos anteriormente, el cual es "rt_vpc_< tusiniciales >".</p>
+
+<p>Seleccionamos de nuevo la VPC a la que se añade esta nueva tabla de enrutamiento en el desplegable, y por último, añadimos la etiqueta que utilizamos en todos los elementos.</p>
+
+<img src="img/17.png">
+
+<p>Una vez hacemos clic en el botón de confirmación, aparece un menú similar al de siempre que se crea un nuevo elemento.</p>
+
+<p>En este nuevo menú, vemos una pestaña llamada "Subnet associations". Entramos en dicha pestaña.</p>
+
+<img src="img/18.png">
+
+<p>Vemos 2 cuadros llamados "Explicit subnet associations" (arriba) y "Subnets without explicit associations" (abajo). En el cuadro de arriba, clicamos en el botón "Edit subnet associations", para poder asociar la subred pública que creamos anteriormente a esta nueva tabla de enrutamiento.</p>
+
+<img src="img/19.png">
+
+<p>Nos aparece una lista de las subredes que tenemos creadas. Simplemente seleccionamos la subred pública y hacemos clic en el botón de confirmación.</p>
+
+<img src="img/20.png">
+
