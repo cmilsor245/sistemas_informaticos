@@ -373,28 +373,26 @@ mkdir miweb
 cd /mnt/c/Users/chris/Documents/DAW/lenguajes_de_marcas/fin_1er_trimestre
 ```
 
-<p>Una vez dentro de este directorio, es necesitamos utilizar la vockey con extensión "pem" para transferir estos archivos. Para hacerlo de una forma sencilla, primero copiamos la vockey del directorio donde la tengamos descargada al directorio donde se encuentra la página web, pero antes de esto, necesitamos copiar la vockey al home de nuestro usuario en el subsistema de Ubuntu en Windows:</p>
+<p>Una vez dentro de este directorio, es necesitamos utilizar la vockey con extensión "pem" para transferir estos archivos. Para hacer esto, primero debemos cambiar los permisos del archivo "vockey.pem".</p>
+
+<p>Lo primero es copiar el archivo desde el directorio donde lo tengamos guardado al directorio home del usuario del subsistema de Ubuntu. En mi caso el comando es el siguiente:</p>
 
 ```bash
-cp /mnt/c/Users/chris/Documents/DAW/.extra/clave\ aws/vockey.pem /home/< username >
+cp /mnt/c/Users/chris/Documents/DAW/.extra/clave\ aws/vockey.pem /home/christianms13
 ```
 
-<p>También es necesario cambiar los permisos de la vockey para que el protocolo scp nos permita utilizarla:</p>
+<p>Una vez tenemos el archivo en el home de Ubuntu, le cambiamos los permisos:</p>
 
 ```bash
-chmod 400 vockey.pem
+chmod 400 /home/christianms13/vockey.pem
 ```
 
 <img src="img/50.png">
 
-<p>Ahora sí, copiamos la vockey con los permisos cambiados al directorio de la web. En mi caso el comando es el siguiente:</p>
+<p>Después de hacer esto, podemos utilizar la vockey para transferir los archivos a la instancia remota.</p>
+
+<p></p>
 
 ```bash
-cp /home/christianms13/vockey.pem .
-```
-
-<p>Después de hacer esto, podemos utilizar la vockey para transferir los archivos a la instancia remota:</p>
-
-```bash
-scp -i "vockey.pem" ./* christianmillan@54.160.11.231:/home/christianmillan/miweb
+scp -i "/home/christianms13/vockey.pem" ./* christianmillan@3.210.185.30:/home/christianmillan/miweb
 ```
