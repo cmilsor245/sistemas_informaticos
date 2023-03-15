@@ -290,3 +290,40 @@
 <p>Si volvemos al panel de control de instancias de EC2 y hacemos clic en el token azul de la instancia que acabamos de crear, podemos ver un resumen de la configuración:</p>
 
 <img src="img/41.png">
+
+<p>La siguiente parte de este ejercicio requiere que establezcamos conexión con la máquina para poder interactuar con ella.</p>
+
+<p>Para ello, podemos utilizar clientes SSH como Putty o MobaXterm, por ejemplo.</p>
+
+<p>En mi caso, utilizo MobaXterm (el proceso es muy similar y parecido en Putty). Creamos un nuevo perfil de conexión, indicamos el host al que queremos conectarnos (IP pública de la instancia, que aparece en el resumen que acabamos de ver), el usuario con el que se inicia sesión en la máquina (de forma predeterminada, Ubuntu crea el usuario "ubuntu") y la clave vockey con extensión "ppk" que autentifica la conexión</p>
+
+<img src="img/42.png">
+
+<p>Una vez se autentifica todo sin problema, ya tenemos acceso al terminal de comandos de la máquina de Ubuntu.</p>
+
+<img src="img/43.png">
+
+<p>Lo primero y más recomendable es ejecutar el siguiente comando nada más iniciar la máquina:</p>
+
+```bash
+sudo apt update -y && sudo apt upgrade -y && sudo apt auto-remove -y
+```
+
+<p>Este comando "pone al día" a la máquina, actualizando sus dependencias y llevando el sistema operativo a la última versión.</p>
+
+<p>Si aparece algún cuadro con opciones, etc., simplemente se le da a ENTER (OK) sin tocar nada hasta que termine la actualización y volvamos a tener el control del terminal de forma normal.</p>
+
+<p>Adicionalmente, con el comando "<code>ip a</code>" podemos ver la IP fija establecida en la configuración de la instancia antes de crearla.</p>
+
+<img src="img/44.png">
+
+<p>Como especifica este ejercicio, el usuario a utilizar debe llamarse "< tunombre >", por lo que vamos a crearlo.</p>
+
+<p>Para ello, debemos utilizar el siguiente comando:</p>
+
+```bash
+sudo adduser < username >
+```
+
+<img src="img/45.png">
+
