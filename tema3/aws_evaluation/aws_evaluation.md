@@ -215,6 +215,8 @@
 
 <li><b>Capa gratuita: instancia tipo "t2.micro", VPC: vpc_< tusiniciales >, subred: vpc_publica_test, IP local fija asignada: 10.0.1.10/24, grupo de seguridad: sg_ubuntu</b></li>
 
+<li><b>Acceso mediante vockey con el usuario < tunombre ></b></li>
+
 <p><b>En este equipo se debe:</b></p>
 
 <li><b>Crear una carpeta en el workdir (/home/user) con el nombre "miweb".</b></li>
@@ -231,3 +233,8 @@
 
 <img src="img/28.png">
 
+<p>Creamos una nueva instancia:</p>
+
+<img src="img/29.png">
+
+<p></p>
