@@ -237,4 +237,44 @@
 
 <img src="img/29.png">
 
-<p></p>
+<p>Establecemos el nombre de la instancia y elegimos la imagen de sistema operativo que se instalará en ella.</p>
+
+<img src="img/30.png">
+
+<p>El tipo de instancia lo dejamos con la opción predeterminada:</p>
+
+<img src="img/31.png">
+
+<p>Seleccionamos la vockey en el siguiente desplegable, para indicar que el acceso a esta instancia se realizará mediante este método.</p>
+
+<img src="img/32.png">
+
+<p>El siguiente cuadro se refiere a la configuración de la red de la nueva instancia. Debemos hacer clic en el botón de edición que aparece en la esquina superior derecha de este cuadro para cmabiar algunos ajustes.</p>
+
+<p>Lo primero es cambiar la VPC que utilizará en el primer desplegable que aparece:</p>
+
+<img src="img/33.png">
+
+<p>En el siguiente desplegable que aparece se selecciona la subred a la que se conecta la instancia (recordemos que tenemos una subred pública y otra privada).</p>
+
+<p>Tenemos que asegurarnos de que la subred que está seleccionada en este desplegable es la pública, tal y como especifica el enunciado de este ejercicio.</p>
+
+<img src="img/34.png">
+
+<p>También hay que habilitar la siguiente opción, que permite que la máquina obtenga una IP pública:</p>
+
+<img src="img/35.png">
+
+<p>El siguiente ajuste sirve para crear un grupo de seguridad que, como especifica el enunciado de este ejercicio, debe ser "sg_ubuntu".</p>
+
+<img src="img/36.png">
+
+<p>Justo después aparece la opción de crear reglas para el grupo de seguridad, las cuales se deben dejar tal cual vienen de forma predeterminada, ya que habilita el puerto para el protocolo ssh.</p>
+
+<p>Por último en este cuadro de configuración de la red de la instancia, tendremos que abrir el último desplegable para cambiar un ajuste extra.</p>
+
+<img src="img/37.png">
+
+<p>Nada más abrirlo vemos que aparece una interfaz ya creada. El único ajuste que debemos tocar aquí es la IP primaria fija que se le asignará a la instancia, la cual es la 10.0.1.10, según especifica el enunciado de este ejercicio.</p>
+
+<img src="img/38.png">
