@@ -370,5 +370,31 @@ mkdir miweb
 <p>Nos dirigimos al directorio donde se encuentra el contenido de la página web, en mi caso con el siguiente comando:</p>
 
 ```bash
+cd /mnt/c/Users/chris/Documents/DAW/lenguajes_de_marcas/fin_1er_trimestre
+```
 
+<p>Una vez dentro de este directorio, es necesitamos utilizar la vockey con extensión "pem" para transferir estos archivos. Para hacerlo de una forma sencilla, primero copiamos la vockey del directorio donde la tengamos descargada al directorio donde se encuentra la página web, pero antes de esto, necesitamos copiar la vockey al home de nuestro usuario en el subsistema de Ubuntu en Windows:</p>
+
+```bash
+cp /mnt/c/Users/chris/Documents/DAW/.extra/clave\ aws/vockey.pem /home/< username >
+```
+
+<p>También es necesario cambiar los permisos de la vockey para que el protocolo scp nos permita utilizarla:</p>
+
+```bash
+chmod 400 vockey.pem
+```
+
+<img src="img/50.png">
+
+<p>Ahora sí, copiamos la vockey con los permisos cambiados al directorio de la web. En mi caso el comando es el siguiente:</p>
+
+```bash
+cp /home/christianms13/vockey.pem .
+```
+
+<p>Después de hacer esto, podemos utilizar la vockey para transferir los archivos a la instancia remota:</p>
+
+```bash
+scp -i "vockey.pem" ./* christianmillan@54.160.11.231:/home/christianmillan/miweb
 ```
