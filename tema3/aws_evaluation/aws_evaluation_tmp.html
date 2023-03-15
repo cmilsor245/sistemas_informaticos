@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>aws_evaluation.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<style>
+  h1{
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 0px;
+  }
+
+  p{
+    text-align: justify;
+  }
+
+  img{
+    border: 2px solid black;
+  }
+
+  #ex{
+    border: none;
+  }
+</style>
+<h1>AWS EVALUATION</h1>
+<hr>
+<p><b>1. AWS Academy Cloud Foundations (Theory)</b></p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/modules_done.png">
+<hr>
+<p><b>2.a. Creaci&#xF3;n de una VPC donde instalar las instancias que vamos a usar.</b></p>
+<p><b>Crear una VPC con las siguientes condiciones:</b></p>
+<li><b>Se trata de montar una infraestructura para una empresa que va a tener dos subredes, una p&#xFA;blica y otra privada. Cada una de las subredes estar&#xE1; dispersa en dos zonas de disponibilidad de la regi&#xF3;n para m&#xE1;s disponibilidad y seguridad.</b></li>
+<li><b>La zona p&#xFA;blica deber&#xE1; tener salida a Internet a trav&#xE9;s de un gateway propio creado para la VPC.</b></li>
+<li><b>El rango de direcciones de la VPC ser&#xE1; el CIDR 10.0.0.0/16 y cada una de las dos subredes tendr&#xE1; los CIDR 10.0.1.0/24 y 10.0.2.0/24 respectivamente.</b></li>
+<li><b>La subred p&#xFA;blica se llamar&#xE1; &quot;vpc_publica_test&quot; y la privada &quot;vpc_privada_test&quot;.</b></li>
+<li><b>Se crear&#xE1; una tabla de enrutamiento que permita salida a Internet a la subred p&#xFA;blica, pero no a la privada.</b></li>
+<p><b>Ficha t&#xE9;cnica:</b></p>
+<li><b>Nombre VPC: vpc_&lt; tusiniciales &gt;</b></li>
+<li><b>Subred p&#xFA;blica: vpc_publica_test</b></li>
+<li><b>Subred privada: vpc_privada_test</b></li>
+<li><b>CIDR VPC: 10.0.0.0/16</b></li>
+<li><b>CIDR p&#xFA;blico: 10.0.1.0/24</b></li>
+<li><b>CIDR privado: 10.0.2.0/24</b></li>
+<p><b>Salida a Internet (subred p&#xFA;blica):</b></p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/salida_publica.png">
+<p>Lo primero es iniciar el Learner Lab del entorno de AWS.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/1.png">
+<p>Una vez dentro del panel de control, buscamos &quot;vpc&quot; en la barra de b&#xFA;squeda y clicamos en la opci&#xF3;n que nos llevar&#xE1; al men&#xFA; principal para poder trabajar con las VPC.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/2.png">
+<p>Entre las opciones que ofrece este panel de control, debemos elegir primero la de crear una nueva VPC.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/3.png">
+<p>Nos encontramos con una serie de ajustes que podemos cambiar o dejar de forma predeterminada. Para empezar, marcamos la opci&#xF3;n &quot;VPC only&quot; de la izquierda, ya que por ahora solo queremos crear una VPC b&#xE1;sica.</p>
+<p>Se le asigna un nombre (&quot;vpc_&lt; tusiniciales &gt;&quot;). Se establece el CIDR que nos pide el ejercicio y, por &#xFA;ltimo, a&#xF1;adimos una etiqueta &quot;AWSEvaluation&quot; con valor &quot;1daw&quot; (esto es solo un ejemplo, la etiqueta puede ser cualquiera, simplemente debe ser identificable).</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/4.png">
+<p>Esto &#xFA;ltimo lo haremos siempre que se presente la opci&#xF3;n de a&#xF1;adir una nueva etiqueta para poder encontrar los elementos de forma m&#xE1;s sencilla en caso de ser necesario.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/5.png">
+<p>Hacemos clic en el bot&#xF3;n &quot;Create VPC&quot; y podemos ver c&#xF3;mo la VPC se ha creado correctamente con los ajustes definidos.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/6.png">
+<p>El siguiente paso es dirigirse al panel lateral de la izquierda para entrar en el apartado &quot;Subnets&quot;.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/7.png">
+<p>Una vez dentro, localizamos la opci&#xF3;n &quot;Create subnet&quot;, en la esquina superior derecha del men&#xFA;. Hacemos clic en ella.</p>
+<p>Se nos presenta un men&#xFA; de creaci&#xF3;n similar al anterior para crear la subred nueva.</p>
+<p>En el desplegable que aparece en el primer cuadro se debe seleccionar la VPC que creamos anteriormente:</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/8.png">
+<p>De esta forma hemos vinculado la nueva subred que vamos a crear a la VPC con la que trabajaremos en este ejercicio.</p>
+<p>En el siguiente cuadro aparecen nuevos ajustes. Debemos establecer un nombre para la nueva subred (tendremos que crear dos subredes, por lo que esta primera se llamar&#xE1; &quot;vpc_publica_test&quot;).</p>
+<p>Es importante que la zona de disponibilidad sea &quot;US East (N. Virginia) / ...&quot;, ya que es donde se localiza la versi&#xF3;n de AWS que tenemos disponible con nuestro correo corporativo.</p>
+<p>Adicionalmente, se le asigna un rango CIDR a la subred (el cual lo da el enunciado del ejercicio) y una etiqueta nueva para tener la posibilidad de localizar este elemento de forma f&#xE1;cil y r&#xE1;pida si es necesario.</p>
+<p>El rango CIDR para la subred p&#xFA;blica es 10.0.1.0/24. Se pone la misma etiqueta en todos los elementos.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/9.png">
+<p>Terminamos de crear la nueva subred y esto nos lleva al panel de control de las subredes, donde podemos ver que la subred se ha creado con &#xE9;xito.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/10.png">
+<p>Ahora es necesario realizar el mismo proceso para la subred privada, pero cambiando los valores pertinentes.</p>
+<p>Se vuelve a seleccionar la VPC que creamos anteriormente en el desplegable del primer cuadro y se establece el nombre correspondiente a esta segunda subred, su rango CIDR (en este caso, 10.0.2.0/24) y su zona de disponibilidad, la cual es distinta de la anterior subred (esta zona de disponibilidad es la que termina en &quot;us-east-1b&quot;).</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/11.png">
+<p>Una vez creadas las dos subredes, volvemos al men&#xFA; lateral izquierdo para entrar en el men&#xFA; &quot;Internet gateways&quot;. La subred p&#xFA;blica debe poder salir a Internet si es necesario, para ello hace falta una puerta de enlace.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/12.png">
+<p>Seguimos el mismo proceso inicial que en los dem&#xE1;s paneles de control y hacemos clic en el bot&#xF3;n &quot;Create internet gateway&quot; en la esquina superior derecha.</p>
+<p>Establecemos un nombre para la nueva puerta de enlace y la asignamos la misma etiqueta de siempre. El nombre puede seguir el patr&#xF3;n &quot;gw_vpc_&lt; tusiniciales &gt;&quot;, por ejemplo, aunque se le puede poner cualquier nombre (preferiblemente reconocible).</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/13.png">
+<p>Clicamos en el bot&#xF3;n de creaci&#xF3;n para terminar de crear el gateway.</p>
+<p>Al crearse, salimos autom&#xE1;ticamente al panel de control, y m&#xE1;s concretamente al apartado del propio gateway que se acaba de crear.</p>
+<p>Ahora es necesario vincular esta puerta de enlace reci&#xE9;n creada con la VPC que creamos anteriormente. Para ello debemos hacer clic en el bot&#xF3;n &quot;Attach to a VPC&quot; que aparece en la esquina superior derecha justo despu&#xE9;s de terminar de crear el gateway.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/14.png">
+<p>Una vez dentro, simplemente seleccionamos nuestro VPC en el desplegable que aparece en el cuadro de ajustes.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/15.png">
+<p>Clicamos en el bot&#xF3;n de confirmaci&#xF3;n y se vincula la puerta de enlace con la VPC.</p>
+<p>Una vez m&#xE1;s, vamos al men&#xFA; lateral izquierdo, esta vez a la opci&#xF3;n &quot;Route tables&quot;.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/16.png">
+<p>Como venimos haciendo en cada men&#xFA;, hacemos clic en el bot&#xF3;n &quot;Create route table&quot; en la esquina superior derecha.</p>
+<p>Para el nombre de la nueva tabla de enrutamiento podemos seguir el mismo patr&#xF3;n que utilizamos anteriormente, el cual es &quot;rt_vpc_&lt; tusiniciales &gt;&quot;.</p>
+<p>Seleccionamos de nuevo la VPC a la que se a&#xF1;ade esta nueva tabla de enrutamiento en el desplegable, y por &#xFA;ltimo, a&#xF1;adimos la etiqueta que utilizamos en todos los elementos.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/17.png">
+<p>Una vez hacemos clic en el bot&#xF3;n de confirmaci&#xF3;n, aparece un men&#xFA; similar al de siempre que se crea un nuevo elemento.</p>
+<p>En este nuevo men&#xFA;, vemos una pesta&#xF1;a llamada &quot;Subnet associations&quot;. Entramos en dicha pesta&#xF1;a.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/18.png">
+<p>Vemos 2 cuadros llamados &quot;Explicit subnet associations&quot; (arriba) y &quot;Subnets without explicit associations&quot; (abajo). En el cuadro de arriba, clicamos en el bot&#xF3;n &quot;Edit subnet associations&quot;, para poder asociar la subred p&#xFA;blica que creamos anteriormente a esta nueva tabla de enrutamiento.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/19.png">
+<p>Nos aparece una lista de las subredes que tenemos creadas. Simplemente seleccionamos la subred p&#xFA;blica y hacemos clic en el bot&#xF3;n de confirmaci&#xF3;n.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/20.png">
+<p>Una vez hecho, si volvemos a la pesta&#xF1;a &quot;Subnet associations&quot;, podemos ver que en el cuadro de arriba ya aparece la subred que acabamos de asociar a esta tabla de enrutamiento.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/21.png">
+<p>Ahora cambiamos de pesta&#xF1;a a la principal, llamada &quot;Routes&quot;.</p>
+<p>En ella podemos ver otro cuadro con un bot&#xF3;n en su esquina superior derecha que dice &quot;Edit routes&quot;. Clicamos en &#xE9;l.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/22.png">
+<p>Lo que tenemos que hacer en este men&#xFA; de ajustes es a&#xF1;adir una ruta nueva conocida como es la 0.0.0.0/0.</p>
+<p>Esta ruta se encarga de que, en caso de que la direcci&#xF3;n con la que se quiere establecer conexi&#xF3;n no se encuentre entre el rango de IPs locales establecidas en la ruta justo encima (es decir, la comunicaci&#xF3;n no se va a establecer con un equipo local, sino con uno fuera de la red interna, un equipo de Internet), se establecer&#xE1; comunicaci&#xF3;n con una IP cualquiera, que no pertenece a la red local.</p>
+<p>Por lo tanto, en el primer recuadro, se establece el rango 0.0.0.0/0 y, en el segundo recuadro (el cual es un desplegable), debemos seleccionar la opci&#xF3;n &quot;Internet Gateway&quot;, la cual mostrar&#xE1; los gateways disponibles, entre los que estar&#xE1; el gateway que creamos anteriormente.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/23.png">
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/24.png">
+<p>Guardamos los cambios.</p>
+<p>Para terminar con la creaci&#xF3;n de la VPC, volvemos al men&#xFA; lateral izquierdo, a la opci&#xF3;n llamada &quot;Your VPCs&quot;.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/25.png">
+<p>Nos aparece una lista de las VPCs que tenemos disponibles. Hacemos clic en la que acabamos de terminar de crear.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/26.png">
+<p>Dentro de ella podemos volver a ver el resumen de la VPC configurada al completo, donde ahora aparece la tabla de enrutamiento principal, entre otras cosas:</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/27.png">
+<hr>
+<p><b>2.b. Una vez creada la VPC, vamos a crear una instancia EC2 en la red p&#xFA;blica.</b></p>
+<p><b>Detalles de la instancia a crear:</b></p>
+<li><b>Nombre: Ubuntu_WebServer</b></li>
+<li><b>Capa gratuita: instancia tipo &quot;t2.micro&quot;, VPC: vpc_&lt; tusiniciales &gt;, subred: vpc_publica_test, IP local fija asignada: 10.0.1.10/24, grupo de seguridad: sg_ubuntu</b></li>
+<li><b>Acceso mediante vockey con el usuario &lt; tunombre &gt;</b></li>
+<p><b>En este equipo se debe:</b></p>
+<li><b>Crear una carpeta en el workdir (/home/user) con el nombre &quot;miweb&quot;.</b></li>
+<li><b>Instalar Docker. A&#xF1;ade al usuario &lt; tunombre &gt; en el grupo &quot;docker&quot; para poder lanzar comandos Docker.</b></li>
+<li><b>Copiar el contenido de una p&#xE1;gina web est&#xE1;tica que tengas creada usando el correspondiente comando scp desde tu equipo y usuario Ubuntu.</b></li>
+<li><b>Lanzar la instrucci&#xF3;n &quot;docker run&quot;, una vez tengamos el contenido web en &quot;/home/user/miweb&quot;, para ejecutar un contenedor llamado &quot;webserver&quot; que ponga en contacto el directorio &quot;/home/user/miweb&quot; con el directorio de publicaci&#xF3;n por defecto de nginx. La imagen a usar ser&#xE1; &quot;nginx:1.23.3-alpine-slim&quot;. Comprueba que al visitar en un navegador &quot;http://&lt; ippublicaserver &gt;&quot; se visualiza el contenido de tu web.</b></li>
+<li><b>Demostrar que, si se modifica en el equipo local la p&#xE1;gina web y se vuelve a transferir con scp este contenido a &quot;/home/user/miweb&quot;, al visitar en cualquier navegador la p&#xE1;gina web &quot;http://&lt; ippublicaserver &gt;&quot; se visualizan los cambios.</b></li>
+<p>El comienzo es similar al ejercicio anterior: buscamos &quot;ec2&quot; en la barra de b&#xFA;squeda del panel de control y hacemos clic en el men&#xFA;.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/28.png">
+<p>Creamos una nueva instancia:</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/29.png">
+<p>Establecemos el nombre de la instancia y elegimos la imagen de sistema operativo que se instalar&#xE1; en ella.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/30.png">
+<p>El tipo de instancia lo dejamos con la opci&#xF3;n predeterminada:</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/31.png">
+<p>Seleccionamos la vockey en el siguiente desplegable, para indicar que el acceso a esta instancia se realizar&#xE1; mediante este m&#xE9;todo.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/32.png">
+<p>El siguiente cuadro se refiere a la configuraci&#xF3;n de la red de la nueva instancia. Debemos hacer clic en el bot&#xF3;n de edici&#xF3;n que aparece en la esquina superior derecha de este cuadro para cmabiar algunos ajustes.</p>
+<p>Lo primero es cambiar la VPC que utilizar&#xE1; en el primer desplegable que aparece:</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/33.png">
+<p>En el siguiente desplegable que aparece se selecciona la subred a la que se conecta la instancia (recordemos que tenemos una subred p&#xFA;blica y otra privada).</p>
+<p>Tenemos que asegurarnos de que la subred que est&#xE1; seleccionada en este desplegable es la p&#xFA;blica, tal y como especifica el enunciado de este ejercicio.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/34.png">
+<p>Tambi&#xE9;n hay que habilitar la siguiente opci&#xF3;n, que permite que la m&#xE1;quina obtenga una IP p&#xFA;blica:</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/35.png">
+<p>El siguiente ajuste sirve para crear un grupo de seguridad que, como especifica el enunciado de este ejercicio, debe ser &quot;sg_ubuntu&quot;.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/36.png">
+<p>Justo despu&#xE9;s aparece la opci&#xF3;n de crear reglas para el grupo de seguridad, las cuales se deben dejar tal cual vienen de forma predeterminada, ya que habilita el puerto para el protocolo ssh.</p>
+<p>Por &#xFA;ltimo en este cuadro de configuraci&#xF3;n de la red de la instancia, tendremos que abrir el &#xFA;ltimo desplegable para cambiar un ajuste extra.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/37.png">
+<p>Nada m&#xE1;s abrirlo vemos que aparece una interfaz ya creada. El &#xFA;nico ajuste que debemos tocar aqu&#xED; es la IP primaria fija que se le asignar&#xE1; a la instancia, la cual es la 10.0.1.10, seg&#xFA;n especifica el enunciado de este ejercicio.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/38.png">
+<p>En el siguiente cuadro, debemos establecer el tama&#xF1;o del almacenamiento de la instancia, donde establecemos 30 GB de almacenamiento, que es el m&#xE1;ximo espacio de almacenamiento gratuito que ofrece nuestro plan en AWS.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/39.png">
+<p>Una vez configurada la nueva instancia, podemos hacer clic en el bot&#xF3;n de confirmaci&#xF3;n y esperar a que se inicie por primera vez la m&#xE1;quina.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/40.png">
+<p>Si volvemos al panel de control de instancias de EC2 y hacemos clic en el token azul de la instancia que acabamos de crear, podemos ver un resumen de la configuraci&#xF3;n:</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/41.png">
+<p>La siguiente parte de este ejercicio requiere que establezcamos conexi&#xF3;n con la m&#xE1;quina para poder interactuar con ella.</p>
+<p>Para ello, podemos utilizar clientes SSH como Putty o MobaXterm, por ejemplo.</p>
+<p>En mi caso, utilizo MobaXterm (el proceso es muy similar y parecido en Putty). Creamos un nuevo perfil de conexi&#xF3;n, indicamos el host al que queremos conectarnos (IP p&#xFA;blica de la instancia, que aparece en el resumen que acabamos de ver), el usuario con el que se inicia sesi&#xF3;n en la m&#xE1;quina (de forma predeterminada, Ubuntu crea el usuario &quot;ubuntu&quot;) y la clave vockey con extensi&#xF3;n &quot;ppk&quot; que autentifica la conexi&#xF3;n</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/42.png">
+<p>Una vez se autentifica todo sin problema, ya tenemos acceso al terminal de comandos de la m&#xE1;quina de Ubuntu.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/43.png">
+<p>Lo primero y m&#xE1;s recomendable es ejecutar el siguiente comando nada m&#xE1;s iniciar la m&#xE1;quina:</p>
+<pre class="hljs"><code><div>sudo apt update -y &amp;&amp; sudo apt upgrade -y &amp;&amp; sudo apt auto-remove -y
+</div></code></pre>
+<p>Este comando &quot;pone al d&#xED;a&quot; a la m&#xE1;quina, actualizando sus dependencias y llevando el sistema operativo a la &#xFA;ltima versi&#xF3;n.</p>
+<p>Si aparece alg&#xFA;n cuadro con opciones, etc., simplemente se le da a ENTER (OK) sin tocar nada hasta que termine la actualizaci&#xF3;n y volvamos a tener el control del terminal de forma normal.</p>
+<p>Adicionalmente, con el comando &quot;<code>ip a</code>&quot; podemos ver la IP fija establecida en la configuraci&#xF3;n de la instancia antes de crearla.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/44.png">
+<p>Como especifica este ejercicio, el usuario a utilizar debe llamarse &quot;&lt; tunombre &gt;&quot;, por lo que vamos a crearlo.</p>
+<p>Para ello, debemos utilizar el siguiente comando:</p>
+<pre class="hljs"><code><div>sudo adduser &lt; username &gt;
+</div></code></pre>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/45.png">
+<p>Lo siguiente es instalar Docker en esta m&#xE1;quina, lo cual se hace con el siguiente comando:</p>
+<pre class="hljs"><code><div>sudo apt install docker.io -y
+</div></code></pre>
+<p>Igual que antes (y siempre que pase en esta pr&#xE1;ctica), si aparecen cuadros con una serie de ajustes o advertencias, se hace clic en ENTER (OK) hasta que termine la instalaci&#xF3;n sin tocar ning&#xFA;n ajuste.</p>
+<p>El ejercicio pide que el usuario personal reci&#xE9;n creado se incluya en el grupo &quot;docker&quot;, lo que permitir&#xE1; a este usuario ejecutar comandos de Docker sin necesidad de escribir &quot;sudo&quot; delante de cada comando.</p>
+<p>El cambio de grupo se hace con el siguiente comando:</p>
+<pre class="hljs"><code><div>sudo adduser &lt; username &gt; docker
+</div></code></pre>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/46.png">
+<p>De ahora en adelante, utilizaremos el usuario personal que ahora s&#xED; tiene acceso a los comandos de Docker. Para ello, debemos cambiar de usuario con el siguiente comando:</p>
+<pre class="hljs"><code><div>su &lt; username &gt;
+</div></code></pre>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/47.png">
+<p>Lo siguiente que pide este ejercicio es que creemos el directorio &quot;miweb&quot; en el directorio personal del usuario que hemos creado. Para hacer esto, ejecutamos el siguiente comando desde el home de nuestro usuario:</p>
+<pre class="hljs"><code><div>mkdir miweb
+</div></code></pre>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/48.png">
+<p>El siguiente paso es transferir el contenido de una p&#xE1;gina web con contenido dentro del directorio &quot;miweb&quot;, todo esto utilizando el subsistema de Ubuntu instalado en Windows.</p>
+<p>Iniciamos el subsistema de Ubuntu en Windows.</p>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/49.png">
+<p>Nos dirigimos al directorio donde se encuentra el contenido de la p&#xE1;gina web, en mi caso con el siguiente comando:</p>
+<pre class="hljs"><code><div><span class="hljs-built_in">cd</span> /mnt/c/Users/chris/Documents/DAW/lenguajes_de_marcas
+</div></code></pre>
+<p>Una vez dentro de este directorio, es necesitamos utilizar la vockey con extensi&#xF3;n &quot;pem&quot; para transferir estos archivos. Para hacer esto, primero debemos cambiar los permisos del archivo &quot;vockey.pem&quot;.</p>
+<p>Lo primero es copiar el archivo desde el directorio donde lo tengamos guardado al directorio home del usuario del subsistema de Ubuntu. En mi caso el comando es el siguiente:</p>
+<pre class="hljs"><code><div>cp /mnt/c/Users/chris/Documents/DAW/.extra/clave\ aws/vockey.pem /home/christianms13
+</div></code></pre>
+<p>Una vez tenemos el archivo en el home de Ubuntu, le cambiamos los permisos:</p>
+<pre class="hljs"><code><div>chmod 400 /home/christianms13/vockey.pem
+</div></code></pre>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/50.png">
+<p>Lo suyo ser&#xED;a utilizar el comando scp para transferir los archivos directamente al directorio &quot;miweb&quot; en el home del usuario personal creado anteriormente en la instancia, pero despu&#xE9;s de intentarlo de muchas maneras siempre me da un error de public key.</p>
+<p>La forma que he decidido utilizar es la siguiente:</p>
+<p>Transferimos los archivos al directorio home del usuario &quot;ubuntu&quot; (usuario que se crea de forma predeterminada con la m&#xE1;quina) y despu&#xE9;s se mueven esos archivos al directorio &quot;miweb&quot; del usuario con nombre.</p>
+<p>Para ello, primero ejecutamos la transferencia de archivos. En mi caso el comando es el siguiente:</p>
+<pre class="hljs"><code><div>scp -r -i <span class="hljs-string">"/home/christianms13/vockey.pem"</span> fin_1er_trimestre/* ubuntu@3.210.185.30:/home/ubuntu/
+</div></code></pre>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/51.png">
+<p>Y ahora desde el cliente SSH (MobaXterm, Putty, etc.), ejecutamos el comando &quot;<code>exit</code>&quot; para volver al usuario &quot;ubuntu&quot;.</p>
+<p>Por &#xFA;ltimo, ya desde este usuario, ejecutamos el comando &quot;<code>mv</code>&quot; para trasladar todo el contenido transferido por scp al directorio &quot;miweb&quot;. Mi comando se ve as&#xED;:</p>
+<pre class="hljs"><code><div>sudo mv css/ font/ img/ index.html js/ pages/ readme/ /home/christianmillan/miweb/
+</div></code></pre>
+<img src="file:///c:/Users/chris/Documents/DAW/sistemas_informaticos/tema3/aws_evaluation/img/52.png">
+
+</body>
+</html>

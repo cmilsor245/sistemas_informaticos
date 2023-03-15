@@ -408,5 +408,8 @@ scp -r -i "/home/christianms13/vockey.pem" fin_1er_trimestre/* ubuntu@3.210.185.
 <p>Por último, ya desde este usuario, ejecutamos el comando "<code>mv</code>" para trasladar todo el contenido transferido por scp al directorio "miweb". Mi comando se ve así:</p>
 
 ```bash
-
+sudo mv css/ font/ img/ index.html js/ pages/ readme/ /home/christianmillan/miweb/
 ```
+
+<img src="img/52.png">
+
