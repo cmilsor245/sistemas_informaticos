@@ -213,4 +213,21 @@
 
 <li><b>Nombre: Ubuntu_WebServer</b></li>
 
-<li><b>Capa gratuita</b></li>
+<li><b>Capa gratuita: instancia tipo "t2.micro", VPC: vpc_< tusiniciales >, subred: vpc_publica_test, IP local fija asignada: 10.0.1.10/24, grupo de seguridad: sg_ubuntu</b></li>
+
+<p><b>En este equipo se debe:</b></p>
+
+<li><b>Crear una carpeta en el workdir (/home/user) con el nombre "miweb".</b></li>
+
+<li><b>Instalar Docker. Añade al usuario < tunombre > en el grupo "docker" para poder lanzar comandos Docker.</b></li>
+
+<li><b>Copiar el contenido de una página web estática que tengas creada usando el correspondiente comando scp desde tu equipo y usuario Ubuntu.</b></li>
+
+<li><b>Lanzar la instrucción "docker run", una vez tengamos el contenido web en "/home/user/miweb", para ejecutar un contenedor llamado "webserver" que ponga en contacto el directorio "/home/user/miweb" con el directorio de publicación por defecto de nginx. La imagen a usar será "nginx:1.23.3-alpine-slim". Comprueba que al visitar en un navegador "http://< ippublicaserver >" se visualiza el contenido de tu web.</b></li>
+
+<li><b>Demostrar que, si se modifica en el equipo local la página web y se vuelve a transferir con scp este contenido a "/home/user/miweb", al visitar en cualquier navegador la página web "http://< ippublicaserver >" se visualizan los cambios.</b></li>
+
+<p>El comienzo es similar al ejercicio anterior: buscamos "ec2" en la barra de búsqueda del panel de control y hacemos clic en el menú.</p>
+
+<img src="img/28.png">
+
