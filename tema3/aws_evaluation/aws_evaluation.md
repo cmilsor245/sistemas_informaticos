@@ -370,7 +370,7 @@ mkdir miweb
 <p>Nos dirigimos al directorio donde se encuentra el contenido de la página web, en mi caso con el siguiente comando:</p>
 
 ```bash
-cd /mnt/c/Users/chris/Documents/DAW/lenguajes_de_marcas/fin_1er_trimestre
+cd /mnt/c/Users/chris/Documents/DAW/lenguajes_de_marcas
 ```
 
 <p>Una vez dentro de este directorio, es necesitamos utilizar la vockey con extensión "pem" para transferir estos archivos. Para hacer esto, primero debemos cambiar los permisos del archivo "vockey.pem".</p>
@@ -389,10 +389,24 @@ chmod 400 /home/christianms13/vockey.pem
 
 <img src="img/50.png">
 
-<p>Después de hacer esto, podemos utilizar la vockey para transferir los archivos a la instancia remota.</p>
+<p>Lo suyo sería utilizar el comando scp para transferir los archivos directamente al directorio "miweb" en el home del usuario personal creado anteriormente en la instancia, pero después de intentarlo de muchas maneras siempre me da un error de public key.</p>
 
-<p></p>
+<p>La forma que he decidido utilizar es la siguiente:</p>
+
+<p>Transferimos los archivos al directorio home del usuario "ubuntu" (usuario que se crea de forma predeterminada con la máquina) y después se mueven esos archivos al directorio "miweb" del usuario con nombre.</p>
+
+<p>Para ello, primero ejecutamos la transferencia de archivos. En mi caso el comando es el siguiente:</p>
 
 ```bash
-scp -i "/home/christianms13/vockey.pem" ./* christianmillan@3.210.185.30:/home/christianmillan/miweb
+scp -r -i "/home/christianms13/vockey.pem" fin_1er_trimestre/* ubuntu@3.210.185.30:/home/ubuntu/
+```
+
+<img src="img/51.png">
+
+<p>Y ahora desde el cliente SSH (MobaXterm, Putty, etc.), ejecutamos el comando "<code>exit</code>" para volver al usuario "ubuntu".</p>
+
+<p>Por último, ya desde este usuario, ejecutamos el comando "<code>mv</code>" para trasladar todo el contenido transferido por scp al directorio "miweb". Mi comando se ve así:</p>
+
+```bash
+
 ```
