@@ -327,3 +327,20 @@ sudo adduser < username >
 
 <img src="img/45.png">
 
+<p>Lo siguiente es instalar Docker en esta máquina, lo cual se hace con el siguiente comando:</p>
+
+```bash
+sudo apt install docker.io -y
+```
+
+<p>Igual que antes (y siempre que pase en esta práctica), si aparecen cuadros con una serie de ajustes o advertencias, se hace clic en ENTER (OK) hasta que termine la instalación sin tocar ningún ajuste.</p>
+
+<p>El ejercicio pide que el usuario personal recién creado se incluya en el grupo "docker", lo que permitirá a este usuario ejecutar comandos de Docker sin necesidad de escribir "sudo" delante de cada comando.</p>
+
+<p>El cambio de grupo se hace con el siguiente comando:</p>
+
+```bash
+sudo adduser < username > docker
+```
+
+<img src="img/46.png">
