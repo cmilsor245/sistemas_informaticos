@@ -278,3 +278,15 @@
 <p>Nada más abrirlo vemos que aparece una interfaz ya creada. El único ajuste que debemos tocar aquí es la IP primaria fija que se le asignará a la instancia, la cual es la 10.0.1.10, según especifica el enunciado de este ejercicio.</p>
 
 <img src="img/38.png">
+
+<p>En el siguiente cuadro, debemos establecer el tamaño del almacenamiento de la instancia, donde establecemos 30 GB de almacenamiento, que es el máximo espacio de almacenamiento gratuito que ofrece nuestro plan en AWS.</p>
+
+<img src="img/39.png">
+
+<p>Una vez configurada la nueva instancia, podemos hacer clic en el botón de confirmación y esperar a que se inicie por primera vez la máquina.</p>
+
+<img src="img/40.png">
+
+<p>Si volvemos al panel de control de instancias de EC2 y hacemos clic en el token azul de la instancia que acabamos de crear, podemos ver un resumen de la configuración:</p>
+
+<img src="img/41.png">
