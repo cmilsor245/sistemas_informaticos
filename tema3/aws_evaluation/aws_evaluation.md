@@ -344,3 +344,31 @@ sudo adduser < username > docker
 ```
 
 <img src="img/46.png">
+
+<p>De ahora en adelante, utilizaremos el usuario personal que ahora sí tiene acceso a los comandos de Docker. Para ello, debemos cambiar de usuario con el siguiente comando:</p>
+
+```bash
+su < username >
+```
+
+<img src="img/47.png">
+
+<p>Lo siguiente que pide este ejercicio es que creemos el directorio "miweb" en el directorio personal del usuario que hemos creado. Para hacer esto, ejecutamos el siguiente comando desde el home de nuestro usuario:</p>
+
+```bash
+mkdir miweb
+```
+
+<img src="img/48.png">
+
+<p>El siguiente paso es transferir el contenido de una página web con contenido dentro del directorio "miweb", todo esto utilizando el subsistema de Ubuntu instalado en Windows.</p>
+
+<p>Iniciamos el subsistema de Ubuntu en Windows.</p>
+
+<img src="img/49.png">
+
+<p>Nos dirigimos al directorio donde se encuentra el contenido de la página web, en mi caso con el siguiente comando:</p>
+
+```bash
+
+```
