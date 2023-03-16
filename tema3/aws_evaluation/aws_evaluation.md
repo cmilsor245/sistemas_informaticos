@@ -434,4 +434,3 @@ docker run --name webserver -d -p 80:80 -v ~/miweb:/usr/share/nginx/html nginx:1
 <p>Y aquí podemos ver la lista de los contenedores:</p>
 
 <img src="img/55.png">
-
