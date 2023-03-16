@@ -413,3 +413,18 @@ sudo mv css/ font/ img/ index.html js/ pages/ readme/ /home/christianmillan/miwe
 
 <img src="img/52.png">
 
+<p>Para seguir con ele ejercicio, debemos utilizar la instrucción "<code>docker run</code>" para crear un contenedor nuevo que ponga en contacto el directorio "miweb" con el directorio de alojamiento de páginas web de nginx.</p>
+
+<p>Para empezar, volvemos a iniciar sesión como el usuario personal en la instancia:</p>
+
+```bash
+su < username >
+```
+
+<img src="img/53.png">
+
+<p>Ahora ejecutamos el siguiente comando para crear el nuevo contenedor y alojar la página web directamente:</p>
+
+```bash
+
+```
