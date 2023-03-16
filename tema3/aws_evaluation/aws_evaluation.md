@@ -476,3 +476,15 @@ sudo mv index.html /home/christianmillan/miweb/
 <p><b>2.c. Buckets en AWS S3:</b></p>
 
 <p><b>Desde la consola del "UbuntuWebServer", lanza las instrucciones "aws s3" necesarias para crear un bucket S3 donde sincronizar tu workdir es este bucket llamado "< misiniciales >backup".</b></p>
+
+<p>Si no estamos en el usuario "ubuntu", ejecutamos el comando "<code>exit</code>" para salir del usuario personal, ya que no tiene permisos suficientes.</p>
+
+<p>Una vez estamos en el usuario "ubuntu", ejecutamos el siguiente comando para instalar AWS CLI en la instancia:</p>
+
+```bash
+sudo apt install awscli -y
+```
+
+<p>De nuevo, pulsamos ENTER (OK) cada vez que sea necesario sin tocar ningún ajuste.</p>
+
+<p>Cuando se termine de instalar, </p>
