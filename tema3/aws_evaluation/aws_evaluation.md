@@ -475,4 +475,4 @@ sudo mv index.html /home/christianmillan/miweb/
 
 <p><b>2.c. Buckets en AWS S3:</b></p>
 
-<p><b></b></p>
+<p><b>Desde la consola del "UbuntuWebServer", lanza las instrucciones "aws s3" necesarias para crear un bucket S3 donde sincronizar tu workdir es este bucket llamado "< misiniciales >backup".</b></p>
