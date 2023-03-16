@@ -527,3 +527,33 @@ region = us-east-1
 ```bash
 nano ~/.aws/credentials
 ```
+
+<p>El contenido que debe tener este fichero aparece en la pestaña de "AWS Details" al entrar en los módulos del Learner Lab</p>
+
+<img src="img/61.png">
+
+<p>Contenido del fichero en mi caso:</p>
+
+<img src="img/62.png">
+
+<p>Ahora el comando "<code>aws configure</code>" utilizará estos valores predeterminados para configurar las credenciales con el AWS CLI.</p>
+
+<img src="img/63.png">
+
+<p>*No se introduce nada en ninguno de los campos que se piden, ya que se establecen de forma predeterminada.</p>
+
+<p>Ahora, con el siguiente comando creamos el nuevo bucket. Debido a que el nombre que me corresponde siguiendo las indicaciones del enunciado de este ejercicio ya está cogido, he tenido que cambiar el nombre, pero siguiendo utilizando mis iniciales:</p>
+
+```bash
+aws s3 mb s3://ejfinalcms
+```
+
+<img src="img/64.png">
+
+<p>Y, por último, con el siguiente comando sincronizamos el workdir de nuestro usuario personal de la instancia de AWS con el bucket recién creado:</p>
+
+```bash
+aws s3 sync . s3://ejfinalcms
+```
+
+<p>El punto "." hace referencia al directorio actual en el que estamos, por lo que tenemos que asegurarnos que estamos en el directorio home de nuestro usuario personal.</p>
