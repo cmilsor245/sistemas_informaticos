@@ -487,4 +487,41 @@ sudo apt install awscli -y
 
 <p>De nuevo, pulsamos ENTER (OK) cada vez que sea necesario sin tocar ningún ajuste.</p>
 
-<p>Cuando se termine de instalar, </p>
+<p>Cuando se termine de instalar, debemos configurar las credenciales de AWS CLI.</p>
+
+<p>En la consola de la instancia, entramos de nuevo en el usuario personal. Mi comando es el siguiente:</p>
+
+```bash
+su christianmillan
+```
+
+<p>Desde este usuario tenemos que ejecutar el siguiente comando para crear el directorio de configuración en nuestro workdir:</p>
+
+```bash
+mkdir ~/.aws
+```
+
+<p>Dentro de este nuevo directorio deberemos crear 2 archivos de confiuración: uno para la región de nuestra cuenta y otro para las credenciales. Empezamos por el de la región.</p>
+
+<p>Ejecutamos el siguiente comando para crear el archivo:</p>
+
+```bash
+nano ~/.aws/config
+```
+
+<p>Se nos abrirá el editor para incluir contenido dentro del archivo. El contenido es el siguiente:</p>
+
+```bash
+[default]
+region = us-east-1
+```
+
+<p>El contenido anterior se debe escribir tal cual aparece aquí dentro del archivo que hemos creado.</p>
+
+<p>Para guardar pulsamos primero "CTRL+O", después ENTER y después "CTRL+X".</p>
+
+<p>Ahora pasamos al siguiente archivo, con el siguiente comando:</p>
+
+```bash
+nano ~/.aws/credentials
+```
