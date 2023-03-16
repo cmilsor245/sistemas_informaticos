@@ -426,5 +426,12 @@ su < username >
 <p>Ahora ejecutamos el siguiente comando para crear el nuevo contenedor y alojar la página web directamente:</p>
 
 ```bash
-
+docker run --name webserver -d -p 80:80 -v ~/miweb:/usr/share/nginx/html nginx:1.23.3-alpine-slim
 ```
+
+<img src="img/54.png">
+
+<p>Y aquí podemos ver la lista de los contenedores:</p>
+
+<img src="img/55.png">
+
