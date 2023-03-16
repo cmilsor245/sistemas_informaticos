@@ -518,6 +518,8 @@ region = us-east-1
 
 <p>El contenido anterior se debe escribir tal cual aparece aquí dentro del archivo que hemos creado.</p>
 
+<img src="img/60.png">
+
 <p>Para guardar pulsamos primero "CTRL+O", después ENTER y después "CTRL+X".</p>
 
 <p>Ahora pasamos al siguiente archivo, con el siguiente comando:</p>
