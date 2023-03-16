@@ -404,7 +404,7 @@ chmod 400 /home/christianms13/vockey.pem
 <p>Para ello, primero ejecutamos la transferencia de archivos. En mi caso el comando es el siguiente:</p>
 
 ```bash
-scp -r -i "/home/christianms13/vockey.pem" fin_1er_trimestre/* ubuntu@3.210.185.30:/home/ubuntu/
+scp -r -i "/home/christianms13/vockey.pem" fin_1er_trimestre/* ubuntu@75.101.247.212:/home/ubuntu/
 ```
 
 <img src="img/51.png">
@@ -444,3 +444,35 @@ docker run --name webserver -d -p 80:80 -v ~/miweb:/usr/share/nginx/html nginx:1
 <p>Debido a que en la configuración de la instancia habilitamos el tráfico mediante protocolos HTTP, podemos visitar la página web que acabamos de alojar en un contenedor con nginx ingresando la url "http://< ippublicaserver >:80". En mi caso la url es "http://75.101.247.212:80" (en el momento de hacer este ejercicio, ya que cada vez que el Learner Lab se reinicia, se cambia l IP pública de las instancias), y se ve así:</p>
 
 <img src="img/57.png">
+
+<p>Para comprobar que cualquier cambio que se realice en la página web se ve reflejado en la página en el navegador, debemos hacer lo siguiente:</p>
+
+<p>Lo primero es realizar un cambio en el código de la página web. En mi caso, voy a cambiar el título que aparece en la página, el cual dice "STAR WARS" ahora mismo, para que ponga "EJERCICIO AWS Y DOCKER". Aquí está el código actualizado:</p>
+
+<img src="img/58.png">
+
+<p>Ahora volvemos a ejecutar el comando scp para subir los cambios al servidor Ubuntu (esta vez solo el archivo "index.html").</p>
+
+```bash
+scp -r -i "/home/christianms13/vockey.pem" fin_1er_trimestre/index.html ubuntu@75.101.247.212:/home/ubuntu/
+```
+
+<p>Desde la instancia ejecutamos el comando "<code>exit</code>" para volver al usuario "ubuntu". Primero elimino el archivo "index.html" del directorio "miweb" y después muevo el recién modificado index a dicho directorio de nuevo.</p>
+
+```bash
+sudo rm /home/christianmillan/miweb/index.html
+```
+
+```bash
+sudo mv index.html /home/christianmillan/miweb/
+```
+
+<p>Como se puede ver a continuación, los cambios se han realizado y actualizado con éxito:</p>
+
+<img src="img/59.png">
+
+<hr>
+
+<p><b>2.c. Buckets en AWS S3:</b></p>
+
+<p><b></b></p>
