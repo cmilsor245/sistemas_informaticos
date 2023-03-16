@@ -249,9 +249,15 @@
 
 <img src="img/32.png">
 
-<p>El siguiente cuadro se refiere a la configuración de la red de la nueva instancia. Debemos hacer clic en el botón de edición que aparece en la esquina superior derecha de este cuadro para cmabiar algunos ajustes.</p>
+<p>El siguiente cuadro se refiere a la configuración de la red de la nueva instancia.</p>
 
-<p>Lo primero es cambiar la VPC que utilizará en el primer desplegable que aparece:</p>
+<p>Antes de hacer nada en este cuadro, bajamos un poco y activamos las casillas para permitir el tráfico mediante protocolos HTTP y HTTPS.</p>
+
+<img src="img/56.png">
+
+<p>Ahora debemos hacer clic en el botón de edición que aparece en la esquina superior derecha de este cuadro para cambiar algunos ajustes.</p>
+
+<p>Lo primero ahora es cambiar la VPC que utilizará en el primer desplegable que aparece:</p>
 
 <img src="img/33.png">
 
@@ -434,3 +440,7 @@ docker run --name webserver -d -p 80:80 -v ~/miweb:/usr/share/nginx/html nginx:1
 <p>Y aquí podemos ver la lista de los contenedores:</p>
 
 <img src="img/55.png">
+
+<p>Debido a que en la configuración de la instancia habilitamos el tráfico mediante protocolos HTTP, podemos visitar la página web que acabamos de alojar en un contenedor con nginx ingresando la url "http://< ippublicaserver >:80". En mi caso la url es "http://75.101.247.212:80" (en el momento de hacer este ejercicio, ya que cada vez que el Learner Lab se reinicia, se cambia l IP pública de las instancias), y se ve así:</p>
+
+<img src="img/57.png">
