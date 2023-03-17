@@ -90,4 +90,58 @@ ls -l
 
 <img src="img/7.png">
 
-<p></p>
+<p>El contenido por ahora es limitado. Solo se ve la carpeta "documentos", la cual contiene el archivo "infopersonal.txt".</p>
+
+<p>Del directorio "documentos" se pueden ver los permisos, el usuario y el grupo propietarios, el tamaño y la fecha de creación.</p>
+
+<p><b>8. Abandona la sesión del usuario "ana" y vuelve a tu usuario de partida.</b></p>
+
+```bash
+exit
+```
+
+<img src="img/8.png">
+
+<p><b>9. Bloquea al usuario "ana". Trata de acceder a él de nuevo y prueba que, efectivamente, ya no es posible acceder a él.</b></p>
+
+```bash
+passwd -l ana
+```
+
+<img src="img/9.1.png">
+
+<p>Ya no se puede iniciar sesión con dicho usuario:</p>
+
+<img src="img/9.2.png">
+
+<p><b>10. Accede al fichero de configuración "/etc/deluser.conf" para modificarlo de manera que cuando usemos la instrucción "<code>deluser</code>" para eliminar un usuario, se elimine también su workdir. Prueba a borrar el usuario "kevin" y comprueba que su workdir ha sido eliminado.</b></p>
+
+```bash
+nano /etc/deluser.conf
+```
+
+<img src="img/10.1.png">
+
+```bash
+deluser kevin
+```
+
+<p>Comprobación de que ya no existe su workdir:</p>
+
+<img src="img/10.2.png">
+
+<p><b>11. Activa de nuevo el acceso a "ana".</b></p>
+
+```bash
+passwd -u ana
+```
+
+<img src="img/11.png">
+
+<p><b>12. Desactiva la petición de contraseña para acceder al usuario "pedro".</b></p>
+
+```bash
+passwd -d pedro
+```
+
+<img src="img/12.png">
