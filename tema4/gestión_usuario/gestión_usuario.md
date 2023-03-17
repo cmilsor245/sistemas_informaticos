@@ -29,3 +29,10 @@
 adduser < username >
 ```
 
+<img src="img/1.png">
+
+<p><b>2. Crea otro usuario llamado "kevin" usando esta vez la instrucción "<code>useradd</code>", de manera que su workdir sea "/home/kevinpersonal". El shell de este usuario será "/bin/bash". Créale una contraseña de acceso.</b></p>
+
+```bash
+
+```
