@@ -39,4 +39,16 @@
 
 <img src="img/1.png">
 
-<li></li>
+<li>Capa física: Se encarga de la transmisión de bits a través de un medio de comunicación físico.</li>
+
+<li>Capa de enlace de datos: Asegura que los datos sean entregados sin errores y en orden a través de la red.</li>
+
+<li>Capa de red: Encargada de enrutar los paquetes de datos a través de la red y de tomar decisiones sobre la mejor ruta para enviarlos.</li>
+
+<li>Capa de transporte: establece y mantiene conexiones extremo a extremo entre dispositivos y proporciona un control de flujo confiable.</li>
+
+<li>Capa de sesión: establece, mantiene y finaliza sesiones entre dispositivos.</li>
+
+<li>Capa de presentación: se encarga de la representación y conversión de datos para que puedan ser interpretados por las aplicaciones que los utilizan.</li>
+
+<li>Capa de aplicación: es la capa más cercana a la interfaz de usuario y proporciona servicios de red a las aplicaciones.</li>
