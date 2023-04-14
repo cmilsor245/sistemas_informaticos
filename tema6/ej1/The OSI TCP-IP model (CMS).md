@@ -52,3 +52,6 @@
 <li>Capa de presentación: se encarga de la representación y conversión de datos para que puedan ser interpretados por las aplicaciones que los utilizan.</li>
 
 <li>Capa de aplicación: es la capa más cercana a la interfaz de usuario y proporciona servicios de red a las aplicaciones.</li>
+
+<p><b>3. Ventajas del modelo OSI.</b></p>
+
