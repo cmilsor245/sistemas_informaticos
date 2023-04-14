@@ -101,4 +101,20 @@
 
 <li><b>ARP (Address Resolution Protocol):</b> Protocolo de Internet utilizado para mapear una dirección IP a una dirección MAC en la capa de enlace de datos.</li>
 
-<li><b></b></li>
+<li><b>FTP (File Transfer Protocol):</b> Protocolo de aplicación que se utiliza para transferir archivos entre dispositivos en una red. Utiliza dos canales de comunicación, uno para la transferencia de datos y otro para la transferencia de comandos.</li>
+
+<li><b>ICMP (Internet Control Message Protocol):</b> Protocolo de Internet utilizado para enviar mensajes de error y de control a otros dispositivos de red.</li>
+
+<li><b>RDP (Remote Desktop Protocol):</b> Protocolo de aplicación utilizado para la conexión remota y el control de un escritorio de un dispositivo a través de una red.</li>
+
+<li><b>SSH (Secure Shell):</b> Protocolo de aplicación que proporciona una conexión segura a un dispositivo remoto a través de una red.</li>
+
+<li><b>IPv4 (Internet Protocol version 4):</b> Protocolo de Internet utilizado en la capa de Internet para enrutar los paquetes de datos a través de una red.</li>
+
+<li><b>SNMP (Simple Network Management Protocol):</b> Protocolo de aplicación utilizado para administrar y supervisar dispositivos de red.</li>
+
+<li><b>IEEE 802.11:</b> Es el conjunto de protocolos de comunicación inalámbrica utilizado en la capa de enlace de datos en redes de área local inalámbricas (WLAN).</li>
+
+<p><b>4. Busca un vídeo explicativo sobre las capas de TCP/IP.</b></p>
+
+<p><a href="https://www.youtube.com/watch?v=2QGgEk20RXM&ab_channel=TechTerms">Este</a> es el vídeo.</p>
