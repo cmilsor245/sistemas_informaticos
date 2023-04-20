@@ -20,9 +20,3 @@
 <h4>CHRISTIAN MILLÁN SORIA</h4>
 
 <hr>
-
-<hr>
-
-<h2>TP-LINK EMULATORS</h2>
-
-<p>Para realizar la práctica del emulador de TP-LINK, entro primero en <a href="https://www.tp-link.com/us/support/emulator/">este enlace</a>.</p>
