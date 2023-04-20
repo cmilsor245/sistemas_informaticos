@@ -25,3 +25,6 @@
 
 <hr>
 
+<p><b>1. ¿Qué es una topología de red? Describe y utiliza imágenes para explicar la red en estrella y la red en árbol.</b></p>
+
+<p></p>
