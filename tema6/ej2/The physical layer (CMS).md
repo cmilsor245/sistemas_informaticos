@@ -59,4 +59,10 @@
 
 <li>Campo FCS (Frame Check Sequence): contiene un valor numérico utilizado para detectar errores en la transmisión del marco.</li>
 
-<p><b>3. </b></p>
+<p><b>3. Las redes actuales (Escribe una breve explicación sobre los siguientes conceptos)...</b></p>
+
+<li><b>1000BASE-T: </b>Se refiere a un estándar de Ethernet que utiliza cable de par trenzado para transmitir datos a una velocidad de 1Gbps.</li>
+
+<li><b>¿Qué es la fibra óptica? Cuenta algo sobre los conectores LC y SC: </b>La fibra óptica es un medio de transmisión que utiliza cables de fibra óptica para transmitir datos mediante pulsos de luz. Los conectores LC y SC son tipos de conectores de fibra óptica utilizados para conectar cables de fibra óptica a dispositivos de red.</li>
+
+<li><b>Conector RJ45 y el estándar EIA/TIA 568-B: </b></li>
