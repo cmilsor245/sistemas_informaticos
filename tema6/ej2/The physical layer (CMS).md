@@ -39,4 +39,24 @@
 
 <p>*Es importante destacar que cada tipo de topología tiene sus propias ventajas y desventajas en términos de escalabilidad, confiabilidad y complejidad de la red.</p>
 
-<p><b>2. </b></p>
+<p><b>2. ¿Qué es el protocolo IEEE 802.3? ¿Qué es un marco Ethernet? Explica brevemente cada uno de los campos más importantes de un marco 802.3.</b></p>
+
+<p>El protocolo IEEE 802.3 es un conjunto de estándares que define cómo se deben comunicar los dispositivos en una red de área local (LAN). Este protocolo especifica los detalles técnicos sobre cómo los dispositivos envían y reciben datos a través de los cables de red.</p>
+
+<p>Antes de que un dispositivo envíe un marco Ethernet, primero se envía un preámbulo de 7 bytes. El preámbulo se utiliza para sincronizar los relojes de los dispositivos que envían y reciben el marco. Además, también se utiliza para indicar el inicio de un marco y para alertar a los dispositivos de que se avecina un marco de datos.</p>
+
+<p>Un marco Ethernet es la unidad básica de datos que se transmite en una red Ethernet. Un marco Ethernet típicamente consta de seis campos diferentes. Estos campos son:</p>
+
+<li>Dirección MAC de origen: identifica la dirección MAC del dispositivo que envía el marco.</li>
+
+<li>Dirección MAC de destino: identifica la dirección MAC del dispositivo receptor del marco.</li>
+
+<li>Tipo de protocolo: indica el tipo de protocolo utilizado para la carga útil de datos del marco.</li>
+
+<li>Datos de la carga útil: es el contenido real que se está transmitiendo en el marco, como por ejemplo un mensaje de correo electrónico o una imagen.</li>
+
+<li>Relleno: se utiliza para llenar el marco y garantizar que tenga una longitud mínima.</li>
+
+<li>Campo FCS (Frame Check Sequence): contiene un valor numérico utilizado para detectar errores en la transmisión del marco.</li>
+
+<p><b>3. </b></p>
