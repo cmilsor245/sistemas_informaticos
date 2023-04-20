@@ -65,4 +65,7 @@
 
 <li><b>¿Qué es la fibra óptica? Cuenta algo sobre los conectores LC y SC: </b>La fibra óptica es un medio de transmisión que utiliza cables de fibra óptica para transmitir datos mediante pulsos de luz. Los conectores LC y SC son tipos de conectores de fibra óptica utilizados para conectar cables de fibra óptica a dispositivos de red.</li>
 
-<li><b>Conector RJ45 y el estándar EIA/TIA 568-B: </b></li>
+<li><b>Conector RJ45 y el estándar EIA/TIA 568-B: </b>El conector RJ45 es un tipo de conector utilizado en Ethernet y otros tipos de redes de área local. El estándar EIA/TIA 568-B es un conjunto de especificaciones para la instalación de cables de red.</li>
+
+<li><b>Conector SFP: </b>Se trata de un módulo óptico que permite la conexión de dispositivos de red como switches, routers y otros equipos de red que utilizan fibra óptica para transmitir datos. Los conectores SFP son pequeños y modulares, lo que permite una fácil instalación y reemplazo en los dispositivos de red.</li>
+
