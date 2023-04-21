@@ -33,7 +33,8 @@
 
 <img src="img/2.png">
 
-<p>Y dentro de aquí clicamos en la opción "VLAN" del menú lateral izquierdo.</p>
+<p>Y dentro de aquí clicamos en la opción "VLAN" del menú lateral izquierdo. Esto nos lleva al sub-apartado de 802.1Q VLAN automáticamente</p>
 
 <img src="img/3.png">
 
+<p>Una vez en este menú, </p>
