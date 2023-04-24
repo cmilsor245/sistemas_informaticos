@@ -61,6 +61,8 @@
 
 <img src="img/6.png">
 
+<p>*Seleccionamos el puerto 1 porque es el asignado de forma predeterminada para la salida a Internet.</p>
+
 <p>Hacemos lo mismo para la VLAN dedicada a todas las aulas del centro.</p>
 
 <img src="img/7.png">
