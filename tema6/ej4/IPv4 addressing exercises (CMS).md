@@ -218,22 +218,22 @@
 <p><b>7. ¿Cuál es la máscara de subred de cada una de las siguientes direcciones IP?</b></p>
 
 <li><b>177.100.18.4</b></li>
-<p>Máscara de subred: 255.255.255.0</p>
+<p>Máscara de subred: 255.255.0.0</p>
 
 <li><b>119.18.45.0</b></li>
-<p>Máscara de subred: 255.255.255.0</p>
+<p>Máscara de subred: 255.255.0.0</p>
 
 <li><b>191.249.234.191</b></li>
-<p>255.255.240.0</p>
+<p>Máscara de subred: 255.255.0.0</p>
 
 <li><b>223.23.223.109</b></li>
 <p>Máscara de subred: 255.255.255.0</p>
 
 <li><b>10.10.250.1</b></li>
-<p>Máscara de subred: 255.255.255.0</p>
+<p>Máscara de subred: 255.0.0.0</p>
 
 <li><b>126.123.23.1</b></li>
-<p>Máscara de subred: 255.255.255.0</p>
+<p>Máscara de subred: 255.0.0.0</p>
 
 <li><b>223.69.230.250</b></li>
 <p>Máscara de subred: 255.255.255.0</p>
@@ -242,34 +242,34 @@
 <p>Máscara de subred: 255.255.255.0</p>
 
 <li><b>77.251.200.51</b></li>
-<p>255.255.254.0</p>
+<p>Máscara de subred: 255.0.0.0</p>
 
 <li><b>189.210.50.1</b></li>
-<p>Máscara de subred: 255.255.255.0</p>
+<p>Máscara de subred: 255.255.0.0</p>
 
 <li><b>88.45.65.35</b></li>
-<p>Máscara de subred: 255.255.255.0</p>
+<p>Máscara de subred: 255.0.0.0</p>
 
 <li><b>128.212.250.254</b></li>
-<p>Máscara de subred: 255.255.255.0</p>
+<p>Máscara de subred: 255.255.0.0</p>
 
 <li><b>193.100.77.83</b></li>
 <p>Máscara de subred: 255.255.255.0</p>
 
 <li><b>125.125.250.1</b></li>
-<p>Máscara de subred: 255.255.255.0</p>
+<p>Máscara de subred: 255.0.0.0</p>
 
 <li><b>1.1.10.50</b></li>
-<p>Máscara de subred: 255.255.255.0</p>
+<p>Máscara de subred: 255.0.0.0</p>
 
 <li><b>220.90.130.45</b></li>
 <p>Máscara de subred: 255.255.255.0</p>
 
 <li><b>134.125.34.9</b></li>
-<p>Máscara de subred: 255.255.255.0</p>
+<p>Máscara de subred: 255.255.0.0</p>
 
 <li><b>95.250.91.99</b></li>
-<p>Máscara de subred: 255.255.255.0</p>
+<p>Máscara de subred: 255.0.0.0</p>
 
 <p><b>8. Determina en esta dirección IPv4 168.12.10.4/18 (notación CIDR):</b></p>
 
