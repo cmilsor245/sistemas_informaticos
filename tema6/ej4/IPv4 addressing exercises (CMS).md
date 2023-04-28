@@ -139,3 +139,80 @@
 
 <p><b>6. Rodea la parte de red y subraya la parte de host de las siguientes direcciones IP:</b></p>
 
+<img src="img/4.png">
+
+<p>Las direcciones IP IPv4 se dividen en una parte de red y una parte de host, que se identifican mediante el uso de una máscara de subred. Para encontrar la parte de red y la parte de host, se deben conocer la máscara de subred y la dirección IP en cuestión.</p>
+
+<p>La parte de red y la parte de host se determinan observando el valor decimal de cada octeto en la dirección IP. El rango de valores de la parte de red varía dependiendo de la clase de dirección, mientras que la parte de host varía dentro de ese rango.</p>
+
+<p>Por ejemplo, en una dirección IP clase B, los primeros dos octetos identifican la red y los dos últimos octetos identifican el host. Por lo tanto, para la dirección IP 177.100.18.4, la parte de red es 177.100 y la parte de host es 18.4.</p>
+
+<p>En resumen, para encontrar la parte de red y la parte de host de una dirección IP IPv4, es necesario conocer la clase de dirección IP y la máscara de subred que se está utilizando. La parte de red varía según la clase de dirección, mientras que la parte de host varía dentro de ese rango.</p>
+
+<p>Dicho esto y teniendo en cuenta lo tomado en cuenta para realizar el ejercicio 5:</p>
+
+<li><b>177.100.18.4</b></li>
+<p>Parte de red: 177.100</p>
+<p>Parte de host: 18.4</p>
+
+<li><b>119.18.45.0</b></li>
+<p>Parte de red: 119.18.45</p>
+<p>Parte de host: 0</p>
+
+<li><b>209.240.80.78</b></li>
+<p>Parte de red: 209.240.80</p>
+<p>Parte de host: 78</p>
+
+<li><b>199.155.77.56</b></li>
+<p>Parte de red: 199.155.77</p>
+<p>Parte de host: 56</p>
+
+<li><b>117.89.56.45</b></li>
+<p>Parte de red: 117.89.56</p>
+<p>Parte de host: 45</p>
+
+<li><b>215.45.45.0</b></li>
+<p>Parte de red: 215.45.45</p>
+<p>Parte de host: 0</p>
+
+<li><b>192.200.15.0</b></li>
+<p>Parte de red: 192.200.15</p>
+<p>Parte de host: 0</p>
+
+<li><b>95.0.21.90</b></li>
+<p>Parte de red: 95.0.21</p>
+<p>Parte de host: 90</p>
+
+<li><b>33.0.0.0</b></li>
+<p>Parte de red: 33</p>
+<p>Parte de host: 0.0.0</p>
+
+<li><b>158.98.80.0</b></li>
+<p>Parte de red: 158.98.80</p>
+<p>Parte de host: 0</p>
+
+<li><b>217.21.56.0</b></li>
+<p>Parte de red: 217.21.56</p>
+<p>Parte de host: 0</p>
+
+<li><b>10.250.1.1</b></li>
+<p>Parte de red: 10</p>
+<p>Parte de host: 250.1.1</p>
+
+<li><b>150.10.15.0</b></li>
+<p>Parte de red: 150.10</p>
+<p>Parte de host: 15.0</p>
+
+<li><b>192.14.2.0</b></li>
+<p>Parte de red: 192.14.2</p>
+<p>Parte de host: 0</p>
+
+<li><b>148.17.9.1</b></li>
+<p>Parte de red: 148.17</p>
+<p>Parte de host: 9.1</p>
+
+<li><b>220.200.23.1</b></li>
+<p>Parte de red: 220.200.23</p>
+<p>Parte de host: 1</p>
+
+<p><b>7. </b></p>
