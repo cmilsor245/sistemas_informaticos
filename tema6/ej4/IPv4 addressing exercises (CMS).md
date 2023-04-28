@@ -280,7 +280,7 @@
 	</tr>
 	<tr style="background-color: #f2f2f2;">
 		<td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;"><strong>a) ¿Cuál es la máscara de subred?</strong></td>
-		<td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">255.255.0.0</td>
+		<td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">255.255.192.0</td>
 	</tr>
 	<tr style="background-color: #f2f2f2;">
 		<td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;"><strong>b) ¿Cuál es la dirección de red de esta IPv4?</strong></td>
