@@ -273,3 +273,29 @@
 
 <p><b>8. Determina en esta dirección IPv4 168.12.10.4/18 (notación CIDR):</b></p>
 
+<table style="border-collapse: collapse; width: 100%; margin-bottom: 20px;">
+	<tr style="background-color: #383a3d; color: white;">
+		<th style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;"><strong>Pregunta</strong></th>
+		<th style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;"><strong>Respuesta</strong></th>
+	</tr>
+	<tr style="background-color: #f2f2f2;">
+		<td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;"><strong>a) ¿Cuál es la máscara de subred?</strong></td>
+		<td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">255.255.0.0</td>
+	</tr>
+	<tr style="background-color: #f2f2f2;">
+		<td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;"><strong>b) ¿Cuál es la dirección de red de esta IPv4?</strong></td>
+		<td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">168.12.0.0</td>
+	</tr>
+	<tr style="background-color: #f2f2f2;">
+		<td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;"><strong>c) ¿Cuál es la dirección IPv4 del primer host en esta red?</strong></td>
+		<td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">168.12.0.1</td>
+	</tr>
+	<tr style="background-color: #f2f2f2;">
+		<td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;"><strong>d) ¿Cuál es la dirección de broadcast IPv4 en esta red?</strong></td>
+		<td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">168.12.63.255</td>
+	</tr>
+	<tr style="background-color: #f2f2f2;">
+		<td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;"><strong>e) ¿Cuál es la dirección IPv4 del último host en esta red?</strong></td>
+		<td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">168.12.63.254</td>
+	</tr>
+</table>
