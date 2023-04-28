@@ -75,8 +75,67 @@
 
 <li>Clase D y Clase E no tienen máscaras de subred predeterminadas, ya que se utilizan para fines especiales y no para la identificación de hosts en redes.</li>
 
+<br>
+
 <img src="img/3.png">
 
 <p><b>4. Traduce a decimal el siguiente código binario (8 bits). Trata de hacerlo mentalmente:</b></p>
 
-<li>10010010</li>
+<li><b>10010010</b> -> 146 (se suman las potencias de 2 que corresponden a las posiciones con un 1 - 128+16+2=146)</li>
+
+<li><b>11111111</b> -> 255 (128+64+32+16+8+4+2+1=255)</li>
+
+<li><b>11000101</b> -> 197 (128+64+4+1=197)</li>
+
+<li><b>11110110</b> -> 246 (128+64+32+16+4+2=246)</li>
+
+<li><b>00010011</b> -> 19 (16+2+1=19)</li>
+
+<li><b>10000001</b> -> 129 (128+1=129)</li>
+
+<li><b>01111000</b> -> 120 (64+32+16+8=120)</li>
+
+<li><b>11110000</b> -> 240 (128+64+32+16=240)</li>
+
+<p><b>5. Identifica la clase IPv4 de las siguientes direcciones IP:</b></p>
+
+<li><b>10.250.1.1_____</b> -> Clase A (El primer byte está en el rango de 1 a 126)</li>
+
+<li><b>150.10.15.0_____</b> -> Clase B (El primer byte está en el rango de 128 a 191)</li>
+
+<li><b>192.14.2.0_____</b> -> Clase C (El primer byte está en el rango de 192 a 223)</li>
+
+<li><b>148.17.9.1_____</b> -> Clase B (El primer byte está en el rango de 128 a 191)</li>
+
+<li><b>193.42.1.1_____</b> -> Clase C (El primer byte está en el rango de 192 a 223)</li>
+
+<li><b>126.8.156.0_____</b> -> Clase A (El primer byte está en el rango de 1 a 126)</li>
+
+<li><b>220.200.23.1_____</b> -> Clase C (El primer byte está en el rango de 192 a 223)</li>
+
+<li><b>200.230.45.58_____</b> -> Clase C (El primer byte está en el rango de 192 a 223)</li>
+
+<li><b>177.100.18.4_____</b> -> Clase B (El primer byte está en el rango de 128 a 191)</li>
+
+<li><b>119.18.45.0_____</b> -> Clase A (El primer byte está en el rango de 1 a 126)</li>
+
+<li><b>221.240.80.78_____</b> -> Clase C (El primer byte está en el rango de 192 a 223)</li>
+
+<li><b>199.155.77.56_____</b> -> Clase C (El primer byte está en el rango de 192 a 223)</li>
+
+<li><b>117.89.56.45_____</b> -> Clase A (El primer byte está en el rango de 1 a 126)</li>
+
+<li><b>215.45.45.0_____</b> -> Clase D (Dirección multicast)</li>
+
+<li><b>199.200.15.0_____</b> -> Clase C (El primer byte está en el rango de 192 a 223)</li>
+
+<li><b>95.0.21.90_____</b> -> Clase A (El primer byte está en el rango de 1 a 126)</li>
+
+<li><b>33.0.0.0_____</b> -> Clase A (El primer byte está en el rango de 1 a 126)</li>
+
+<li><b>158.98.280.0_____</b> -> No es una dirección IP válida, ya que el valor "280" está fuera del rango de 0 a 255.</li>
+
+<li><b>219.21.56.0_____</b> -> Clase C (El primer byte está en el rango de 192 a 223)</li>
+
+<p><b>6. Rodea la parte de red y subraya la parte de host de las siguientes direcciones IP:</b></p>
+
