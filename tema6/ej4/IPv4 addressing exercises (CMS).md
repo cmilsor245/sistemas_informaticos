@@ -149,15 +149,15 @@
 
 <p>En resumen, para encontrar la parte de red y la parte de host de una dirección IP IPv4, es necesario conocer la clase de dirección IP y la máscara de subred que se está utilizando. La parte de red varía según la clase de dirección, mientras que la parte de host varía dentro de ese rango.</p>
 
-<p>Dicho esto y teniendo en cuenta lo tomado en cuenta para realizar el ejercicio 5:</p>
+<p>Dicho esto y teniendo en cuenta el ejercicio 5:</p>
 
 <li><b>177.100.18.4</b></li>
 <p>Parte de red: 177.100</p>
 <p>Parte de host: 18.4</p>
 
 <li><b>119.18.45.0</b></li>
-<p>Parte de red: 119.18.45</p>
-<p>Parte de host: 0</p>
+<p>Parte de red: 119</p>
+<p>Parte de host: 18.45.0</p>
 
 <li><b>209.240.80.78</b></li>
 <p>Parte de red: 209.240.80</p>
@@ -168,8 +168,8 @@
 <p>Parte de host: 56</p>
 
 <li><b>117.89.56.45</b></li>
-<p>Parte de red: 117.89.56</p>
-<p>Parte de host: 45</p>
+<p>Parte de red: 117</p>
+<p>Parte de host: 89.56.45</p>
 
 <li><b>215.45.45.0</b></li>
 <p>Parte de red: 215.45.45</p>
@@ -180,16 +180,16 @@
 <p>Parte de host: 0</p>
 
 <li><b>95.0.21.90</b></li>
-<p>Parte de red: 95.0.21</p>
-<p>Parte de host: 90</p>
+<p>Parte de red: 95</p>
+<p>Parte de host: 0.21.90</p>
 
 <li><b>33.0.0.0</b></li>
 <p>Parte de red: 33</p>
 <p>Parte de host: 0.0.0</p>
 
 <li><b>158.98.80.0</b></li>
-<p>Parte de red: 158.98.80</p>
-<p>Parte de host: 0</p>
+<p>Parte de red: 158.98</p>
+<p>Parte de host: 80.0</p>
 
 <li><b>217.21.56.0</b></li>
 <p>Parte de red: 217.21.56</p>
@@ -217,3 +217,75 @@
 
 <p><b>7. ¿Cuál es la máscara de subred de cada una de las siguientes direcciones IP?</b></p>
 
+<li><b>177.100.18.4</b></li>
+<p>Máscara de subred: 255.255.255.0</p>
+
+<li><b>119.18.45.0</b></li>
+<p>Máscara de subred: 255.255.255.0</p>
+
+<li><b>191.249.234.191</b></li>
+<p>255.255.240.0</p>
+
+<li><b>223.23.223.109</b></li>
+<p>Máscara de subred: 255.255.255.0</p>
+
+<li><b>10.10.250.1</b></li>
+<p>Máscara de subred: 255.255.255.0</p>
+
+<li><b>126.123.23.1</b></li>
+<p>Máscara de subred: 255.255.255.0</p>
+
+<li><b>223.69.230.250</b></li>
+<p>Máscara de subred: 255.255.255.0</p>
+
+<li><b>192.12.35.105</b></li>
+<p>Máscara de subred: 255.255.255.0</p>
+
+<li><b>77.251.200.51</b></li>
+<p>255.255.254.0</p>
+
+<li><b>189.210.50.1</b></li>
+<p>Máscara de subred: 255.255.255.0</p>
+
+<li><b>88.45.65.35</b></li>
+<p>Máscara de subred: 255.255.255.0</p>
+
+<li><b>128.212.250.254</b></li>
+<p>Máscara de subred: 255.255.255.0</p>
+
+<li><b>193.100.77.83</b></li>
+<p>Máscara de subred: 255.255.255.0</p>
+
+<li><b>125.125.250.1</b></li>
+<p>Máscara de subred: 255.255.255.0</p>
+
+<li><b>1.1.10.50</b></li>
+<p>Máscara de subred: 255.255.255.0</p>
+
+<li><b>220.90.130.45</b></li>
+<p>Máscara de subred: 255.255.255.0</p>
+
+<li><b>134.125.34.9</b></li>
+<p>Máscara de subred: 255.255.255.0</p>
+
+<li><b>95.250.91.99</b></li>
+<p>Máscara de subred: 255.255.255.0</p>
+
+<table style="border-collapse: collapse; width: 100%;">
+  <tr style="background-color: #f2f2f2;">
+    <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Dirección IP</th>
+    <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Máscara de subred</th>
+    <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Dirección de red</th>
+    <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Primera dirección válida</th>
+    <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Última dirección válida</th>
+    <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Dirección de broadcast</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #ddd; padding: 8px;">168.12.10.4/18</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">255.255.192.0</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">168.12.0.0</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">168.12.0.1</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">168.12.63.254</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">168.12.63.255</td>
+  </tr>
+</table>
