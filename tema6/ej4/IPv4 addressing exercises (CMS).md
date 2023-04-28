@@ -271,21 +271,5 @@
 <li><b>95.250.91.99</b></li>
 <p>Máscara de subred: 255.255.255.0</p>
 
-<table style="border-collapse: collapse; width: 100%;">
-  <tr style="background-color: #f2f2f2;">
-    <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Dirección IP</th>
-    <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Máscara de subred</th>
-    <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Dirección de red</th>
-    <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Primera dirección válida</th>
-    <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Última dirección válida</th>
-    <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Dirección de broadcast</th>
-  </tr>
-  <tr>
-    <td style="border: 1px solid #ddd; padding: 8px;">168.12.10.4/18</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">255.255.192.0</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">168.12.0.0</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">168.12.0.1</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">168.12.63.254</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">168.12.63.255</td>
-  </tr>
-</table>
+<p><b>8. Determina en esta dirección IPv4 168.12.10.4/18 (notación CIDR):</b></p>
+
