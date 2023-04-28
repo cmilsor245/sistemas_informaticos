@@ -215,4 +215,5 @@
 <p>Parte de red: 220.200.23</p>
 <p>Parte de host: 1</p>
 
-<p><b>7. </b></p>
+<p><b>7. ¿Cuál es la máscara de subred de cada una de las siguientes direcciones IP?</b></p>
+
