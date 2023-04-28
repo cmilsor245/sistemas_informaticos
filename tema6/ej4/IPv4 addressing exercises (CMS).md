@@ -61,4 +61,22 @@
 
 <p>Las direcciones IP privadas no son enrutables a través de Internet y que deben utilizarse en combinación con un enrutador NAT (traducción de direcciones de red) para permitir que los dispositivos en la red privada se comuniquen con dispositivos en Internet.</p>
 
-<p><b>3. </b></p>
+<img src="img/2.png">
+
+<p><b>3. ¿Cuál es la máscara de subred predeterminada para cada una de las clases de IPv4?</b></p>
+
+<p>Cada clase de direcciones IPv4 tiene una máscara de subred predeterminada, que se utiliza para determinar la parte de la dirección que corresponde a la red y la parte que corresponde al host. Las máscaras de subred se expresan en términos de bits y se pueden representar como una dirección IPv4 de 32 bits, en la que los bits de red se establecen en 1 y los bits de host se establecen en 0. Las máscaras de subred predeterminadas son las siguientes:</p>
+
+<li>Clase A: 255.0.0.0</li>
+
+<li>Clase B: 255.255.0.0</li>
+
+<li>Clase C: 255.255.255.0</li>
+
+<li>Clase D y Clase E no tienen máscaras de subred predeterminadas, ya que se utilizan para fines especiales y no para la identificación de hosts en redes.</li>
+
+<img src="img/3.png">
+
+<p><b>4. Traduce a decimal el siguiente código binario (8 bits). Trata de hacerlo mentalmente:</b></p>
+
+<li>10010010</li>
