@@ -301,3 +301,50 @@
 </table>
 
 <img src="img/5.png">
+
+<p>Proceso por pasos:</p>
+
+<p>Primero paso la dirección IP a binario.</p>
+
+```
+168.12.10.4 -> 10101000.00001100.00001010.00000100
+```
+
+<p>Acto seguido paso la máscara de subred (18 en este caso) a binario.</p>
+
+```
+11111111.11111111.11000000.00000000 -> 255.255.192.0
+```
+
+<p>De aquí ya se puede averiguar cuál es la parte de red y bla parte de host de esta IP.</p>
+
+<p>La parte de red corresponde a la parte que cuadra con todos los 1 de la máscara de subred y la parte de host es lo que corresponde a los 0 de la máscara de subred.</p>
+
+```
+- Máscara de subred -> 11111111.11111111.11 ~ IP -> 10101000.00001100.00 ~ Red
+- Máscara de subred -> 000000.00000000 ~ IP -> 001010.00000100 ~ Host
+```
+
+<p>Para obtener la dirección de red, cojo la parte de host de la IP y la paso a 0 completamente.</p>
+
+```
+10101000.00001100.00000000.00000000 -> 168.12.0.0
+```
+
+<p>El primer host que estará disponible en esta red es igual a la dirección de red+1.</p>
+
+```
+168.12.0.1
+```
+
+<p>Para obtener la dirección de broadcast, se hace el mismo proceso que con la dirección de red, pero esta vez pasando toda la parte de host a 1 completamente.</p>
+
+```
+10101000.00001100.00111111.11111111 -> 168.12.63.255
+```
+
+<p>Por último, para obtener el último host que estará disponible en esta red es la dirección de broadcast-1.</p>
+
+```
+168.12.63.254
+```
