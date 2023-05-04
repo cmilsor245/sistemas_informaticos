@@ -316,7 +316,7 @@
 11111111.11111111.11000000.00000000 -> 255.255.192.0
 ```
 
-<p>De aquí ya se puede averiguar cuál es la parte de red y bla parte de host de esta IP.</p>
+<p>De aquí ya se puede averiguar cuál es la parte de red y la parte de host de esta IP.</p>
 
 <p>La parte de red corresponde a la parte que cuadra con todos los 1 de la máscara de subred y la parte de host es lo que corresponde a los 0 de la máscara de subred.</p>
 
