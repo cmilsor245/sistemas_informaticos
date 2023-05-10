@@ -121,4 +121,8 @@
 
 <img src="img/20.png">
 
-<p>Una vez dentro, </p>
+<p>Una vez dentro, establezco la dirección IP para el servidor (192.168.1.2). Dejo la subred de 255.255.255.0 y como puerta de enlace escribo la que tendrá el router (192.168.1.254).</p>
+
+<img src="img/21.png">
+
+<p>Voy a la configuración del router. Lo primero que hago es apagarlo. Una vez apagado, añado la interfaz de conexión</p>
