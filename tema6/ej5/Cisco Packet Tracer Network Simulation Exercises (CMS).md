@@ -27,7 +27,7 @@
 
 <li><b>4 hosts pertenecientes a la red 192.168.1.X/24</b></li>
 
-<li><b>Un switch ovn 24 puertos</b></li>
+<li><b>Un switch de 24 puertos</b></li>
 
 <p><b>Esta red debe simular el envío de PDUs entre los equipos de la misma.</b></p>
 
@@ -79,4 +79,46 @@
 
 <hr>
 
-<p><b>2. </b></p>
+<p><b>2. Realizar un entorno LAN simple con un servidor DHCP. Se deberán utilizar los siguientes elementos:</b></p>
+
+<li><b>Un router que actúe como puerta de enlace (192.168.1.254)</b></li>
+
+<li><b>Un servidor DHCP (192.168.1.2) que ofrezca IPs desde la 192.168.1.100 a la 192.168.1.200, la dirección de la puerta de enlace y el servidor DNS 1.1.1.1</b></li>
+
+<li><b>Un switch de 24 puertos</b></li>
+
+<li><b>4 hosts pertenecientes a la red LAN. Los hosts recibirán una IP automáticamente por el servidor DHCP</b></li>
+
+<p><b>Debes ser capaz de enviar un simple PDU de un equipo a otro.</b></p>
+
+<p>Siguiendo un poco el procedimiento anterior, establezco los elementos necesarios (esta vez, un router, un switch (el mismo que antes) y 4 equipos).</p>
+
+<img src="img/12.png">
+
+<p>Esta vez la conexión va a ser de tipo directa. Selecciono el cable de tipo de conexión directa en el menú de conexiones y conecto los equipos al primer puerto disponible que aparezca uno detrás de otro.</p>
+
+<img src="img/13.png">
+
+<img src="img/14.png">
+
+<img src="img/15.png">
+
+<p>El mismo proceso para los 3 hosts restantes.</p>
+
+<p>Se hace el mismo proceso también para conectar el switch al router. En cuando se vaya a conectar al router, se elige el siguiente puerto:</p>
+
+<img src="img/16.png">
+
+<p>Por último, se conecta el servidor DHCP al router.</p>
+
+<img src="img/17.png">
+
+<img src="img/18.png">
+
+<img src="img/19.png">
+
+<p>Lo siguiente es realizar la configuración del servidor DHCP. Abro su configuración (clic en él) y voy a la pestaña "Desktop". Entro en "IP Configuration".</p>
+
+<img src="img/20.png">
+
+<p>Una vez dentro, </p>
