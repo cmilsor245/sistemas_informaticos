@@ -110,3 +110,69 @@
 <p>Lo primero que hago dentro de la máquina es establecer una IP fija, para que no cambie mediante DHCP y la conexión se vea alterada.</p>
 
 <img src="img/3.png">
+
+<p>Es importante también activar la opción de Escritorio Remoto para que esta conexión se pueda llevar a cabo.</p>
+
+<img src="img/4.png">
+
+<p>Cambio los ajustes del plan de energía para prevenir que el equipo se apague o se ponga en modo suspensión tras un determinado tiempo, ya que este debe estar encendido indefinidamente.</p>
+
+<img src="img/5.png">
+
+<p>Una vez realizados estos pasos, me dirijo a la configuración del router, ingresando la dirección 192.168.10.1 en la URL de un navegador. Inicio sesión.</p>
+
+<img src="img/6.png">
+
+<p>Paso del modo básico de configuración al modo experto para poder acceder a todas las características.</p>
+
+<img src="img/7.png">
+
+<p>Me dirijo al apartado de Internet.</p>
+
+<img src="img/8.png">
+
+<p>Entro en el sub-apartado de Redirección de Puertos.</p>
+
+<img src="img/9.png">
+
+<p>Lo que tengo que hacer aquí es crear una nueva regla dedicada al equipo servidor al que me quiero conectar.</p>
+
+<p>Establezco que el protocolo que se va a usar es TCP, la IP fija que tiene ahora mi equipo, el puerto público por el que se conectarán los clientes a este servidor y el puerto LAN por el que se pasarán los paquetes de información sobre la conexión que se quiere realizar.</p>
+
+<p>Los paquetes de la conexión entrarán por el puerto 5058 (puede ser cualquier puerto que no esté reservado de forma predeterminada para un protocolo), y una vez dentro de la red buscará el puerto 3389 (dedicado al protocolo RDP), que redirige los paquetes al equipo con IP 192.168.10.13.</p>
+
+<img src="img/10.png">
+
+<img src="img/11.png">
+
+<p>Por último, creo un nuevo usuario de nombre "remoto" y le establezco una contraseña fuerte, como "XX1269#r".</p>
+
+<img src="img/15.png">
+
+<p>Procedo a, desde el equipo cliente/mi equipo personal, conectarme por Escritorio Remoto, escribiendo la IP pública del equipo servidor y el puerto por el que se enviarán los paquetes.</p>
+
+<img src="img/12.png">
+
+<p>Escribo las credenciales de inicio de sesión.</p>
+
+<img src="img/13.png">
+
+<p>Ya puedo acceder al equipo como si estuviera trabajando localmente con él.</p>
+
+<img src="img/14.png">
+
+<hr>
+
+<p>Debido a una medida de pago de Windows, este equipo no podrá mantener varias sesiones con el mismo usuario activas al mismo tiempo. Esto es una característica de pago de la que hablo en el ejercicio 4, con varios enlaces al wrapper, un parche NO OFICIAL que puede permitir que varias personas se conecten con el mismo usuario a la misma máquina sin echar el uno al otro.</p>
+
+<hr>
+
+<p>Anteriormente vimos como, al establecer conexión por RDP desde la máquina cliente a la máquina servidor, lo hago escribiendo la IP pública de la red en la que se encuentra el equipo servidor.</p>
+
+<p>Esto no es nada recomendable, debido a que cada cierto tiempo, la IP pública puede cambiar si no se ha contratado un servicio que la mantenga fija.</p>
+
+<p>Para solucionar este problema, podemos acudir a Duck DNS, una página que permite crear un dominio con un nombre único en el mundo que suplanta la IP pública de la red para prevenir errores por los cambios de IP mencionados.</p>
+
+<img src="img/16.png">
+
+<p>De esta forma, la conexión se realizaría, en lugar de escribiendo la IP pública de la red a la que nos queremos conectar, escribiendo el nombre del dominio creado en Duck DNS.</p>
