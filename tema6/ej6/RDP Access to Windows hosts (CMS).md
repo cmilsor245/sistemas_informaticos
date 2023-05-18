@@ -53,15 +53,9 @@
 
 <li>Accede a la interfaz de administración del enrutador. Para ello, abre un navegador web e ingresa la dirección IP del enrutador en la barra de direcciones. Por lo general, la dirección IP predeterminada es 192.168.1.1 o 192.168.0.1, pero puede variar según el fabricante del enrutador.</li>
 
-<img src="img/1.png">
-
 <li>Inicia sesión en la interfaz de administración del enrutador utilizando las credenciales de acceso. Estas credenciales suelen ser proporcionadas por el fabricante o pueden haber sido configuradas previamente.</li>
 
-<img src="img/2.png">
-
 <li>Busca la sección de "Reenvío de puertos" o "Port Forwarding" en la configuración del enrutador. La ubicación exacta puede variar según el enrutador y la versión de firmware que estés utilizando.</li>
-
-<img src="img/3.png">
 
 <li>Dentro de la sección de reenvío de puertos, deberás agregar una regla de reenvío de puerto para el host de Windows al que deseas acceder. Esto implicará proporcionar la dirección IP local del host y el número de puerto que deseas reenviar.</li>
 
@@ -102,3 +96,17 @@
 <li>Reinicia el equipo: Después de aplicar el parche, reinicia el equipo para que los cambios surtan efecto.</li>
 
 <p>Una vez que hayas aplicado el parche RDP Wrapper, podrás conectarte a tu PC a través de múltiples sesiones de RDP de forma simultánea. Sin embargo, ten en cuenta que esto puede tener implicaciones de seguridad, ya que permite que múltiples usuarios accedan a la misma PC al mismo tiempo. Asegúrate de tomar las medidas de seguridad necesarias para proteger tu PC y la información que contiene.</p>
+
+<p><b>5. Conectar con una máquina externa por RDP (proceso completo).</b></p>
+
+<p>Tenemos una máquina situada en una red externa a la que tenemos acceso mediante AnyDesk, pero no mediante RDP.</p>
+
+<p>Para empezar, instalo AnyDesk y establezco conexión con dicha máquina.</p>
+
+<img src="img/1.png">
+
+<img src="img/2.png">
+
+<p>Lo primero que hago dentro de la máquina es establecer una IP fija, para que no cambie mediante DHCP y la conexión se vea alterada.</p>
+
+<img src="img/3.png">
