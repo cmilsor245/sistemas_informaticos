@@ -80,3 +80,23 @@
 <img src="img/6.png">
 
 <p>Una vez realizado todo esto, me dirigo a mi máquina personal. Instalo el cliente de OpenVPN desde <a href="https://openvpn.net/client/client-connect-vpn-for-windows/">este enlace</a>.</p>
+
+<p>Previamente me he descargado el archivo de configuración de la VPN que el profesor ha exportado desde su servidor y nos ha enviado por correo:</p>
+
+<img src="img/7.png">
+
+<p>Una vez instalado el cliente de OpenVPN, me dirijo a importar el archivo de configuración.</p>
+
+<img src="img/8.png">
+
+<p>Este archivo tiene dentro cambiado el texto "YOUR_SERVER_IP" por el dominio "navicom.synology.com" para que la conexión se desarrolle sin problemas.</p>
+
+<p>Debido a que me ha sido imposible iniciar sesión con mi perfil de usuario (puede que debido a que la contraseña no es la correcta o que no tengo los permisos suficientes), el compañero Óscar Mateo de 1º de DAM me ha prestado sus credenciales para poder terminar de realizar la práctica.</p>
+
+<img src="img/9.png">
+
+<img src="img/10.png">
+
+<p>Una vez dentro de la red mediante la VPN, puedo escribir la dirección "\\192.168.10.12" para acceder al gestor de archivos del servidor y ver los archivos que hay disponibles dentro de él.</p>
+
+<img src="img/11.png">
