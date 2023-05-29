@@ -54,3 +54,29 @@
 <p>Una vez dentro de la máquina (tarda en cargar un poco), me encuentro con el escritorio del NAS en el que trabajaré.</p>
 
 <img src="img/1.png">
+
+<p>Me dirijo al menú de aplicaciones y busco la aplicación "VPN Server" y la instalo.</p>
+
+<img src="img/2.png">
+
+<p>Abro la aplicación y veo que hay tres opciones de VPN. Me centraré en OpenVPN.</p>
+
+<img src="img/3.png">
+
+<p>Abajo a la izquierda entro en la configuración del mismo.</p>
+
+<img src="img/4.png">
+
+<p>Dentro de aquí, habilito el servicio de OpenVPN. Una vez hecho esto, configuro algunos parámetros: establezco una dirección IP, el número máximo de conexiones con el servidor, el número de conexiones máximas por usuario, el puerto predeterminado del servicio (dejo el 1194) y el protocolo (dejo UDP).</p>
+
+<p>Aplico los cambios.</p>
+
+<p>Lo siguiente sería crear un usuario y darle privilegios para trabajar dentro de la red, pero como estoy trabajando con un simulador, no puedo hacer esto. A continuación adjunto una captura del servidor del profesor donde sí que aparecen algunos usuarios ya creados y con permisos, entre los que aparece mi usuario:</p>
+
+<img src="img/5.png">
+
+<p>El siguiente paso es realizar un redireccionamiento de puertos para este protocolo, de la misma manera que hice en la práctica de RDP. Entraría en la configuración del router de Vodafone que se encuentra en Navicom -> Configuración Avanzada -> Redirección de puertos -> creo una nueva regla que establezca el puerto UDP (TPC opcional) y redirija el puerto 1194 al mismo puerto, que se dirigirá a la IP 192.168.10.12, que es el servidor con el que estamos trabajando.</p>
+
+<img src="img/6.png">
+
+<p>Una vez realizado todo esto, me dirigo a mi máquina personal. Instalo el cliente de OpenVPN desde <a href="https://openvpn.net/client/client-connect-vpn-for-windows/">este enlace</a>.</p>
